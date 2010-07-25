@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
+		77C8280E06725ACE000B614F /* GithubNotifier_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* GithubNotifier_AppDelegate.m */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		F40921C811E96048001550DC /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40921C711E96048001550DC /* Preferences.xib */; };
+		F430F65711E36CA1000A7CFE /* NSColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = F430F63711E36CA1000A7CFE /* NSColor+Hex.m */; };
+		F430F65811E36CA1000A7CFE /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = F430F63911E36CA1000A7CFE /* NSData+Base64.m */; };
+		F430F65911E36CA1000A7CFE /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = F430F63B11E36CA1000A7CFE /* NSString+UUID.m */; };
+		F430F65A11E36CA1000A7CFE /* SDGithubTask.m in Sources */ = {isa = PBXBuildFile; fileRef = F430F63D11E36CA1000A7CFE /* SDGithubTask.m */; };
+		F430F65B11E36CA1000A7CFE /* SDGithubTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F430F63F11E36CA1000A7CFE /* SDGithubTaskManager.m */; };
+		F430F65C11E36CA1000A7CFE /* SDNetTask.m in Sources */ = {isa = PBXBuildFile; fileRef = F430F64111E36CA1000A7CFE /* SDNetTask.m */; };
+		F430F65D11E36CA1000A7CFE /* SDNetTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F430F64411E36CA1000A7CFE /* SDNetTaskManager.m */; };
+		F430F65E11E36CA1000A7CFE /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = F430F64511E36CA1000A7CFE /* yajl_alloc.c */; };
+		F430F65F11E36CA1000A7CFE /* yajl_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = F430F64711E36CA1000A7CFE /* yajl_buf.c */; };
+		F430F66011E36CA1000A7CFE /* yajl_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = F430F64B11E36CA1000A7CFE /* yajl_encode.c */; };
+		F430F66111E36CA1000A7CFE /* yajl_gen.c in Sources */ = {isa = PBXBuildFile; fileRef = F430F64D11E36CA1000A7CFE /* yajl_gen.c */; };
+		F430F66211E36CA1000A7CFE /* yajl_lex.c in Sources */ = {isa = PBXBuildFile; fileRef = F430F64F11E36CA1000A7CFE /* yajl_lex.c */; };
+		F430F66311E36CA1000A7CFE /* yajl_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = F430F65211E36CA1000A7CFE /* yajl_parser.c */; };
+		F430F66411E36CA1000A7CFE /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = F430F65411E36CA1000A7CFE /* yajl.c */; };
+		F430F66511E36CA1000A7CFE /* YAJLDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F430F65611E36CA1000A7CFE /* YAJLDecoder.m */; };
+		F430F67611E36CEF000A7CFE /* GithubNotifier_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F430F67511E36CEF000A7CFE /* GithubNotifier_DataModel.xcdatamodel */; };
+		F43BF98E11E4AF81003346C7 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF98D11E4AF81003346C7 /* PreferencesWindowController.m */; };
+		F43BF99511E4B00C003346C7 /* GithubUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF99411E4B00C003346C7 /* GithubUser.m */; };
+		F43BF99C11E4B024003346C7 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF99B11E4B024003346C7 /* AppController.m */; };
+		F43BF9AB11E4B06C003346C7 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = F43BF9A111E4B06C003346C7 /* Growl Registration Ticket.growlRegDict */; };
+		F43BF9AC11E4B06C003346C7 /* GrowlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF9A311E4B06C003346C7 /* GrowlManager.m */; };
+		F43BF9AD11E4B06C003346C7 /* NetworkDataDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF9A511E4B06C003346C7 /* NetworkDataDelegate.m */; };
+		F43BF9AE11E4B06C003346C7 /* NetworkMetaDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF9A711E4B06C003346C7 /* NetworkMetaDelegate.m */; };
+		F43BF9AF11E4B06C003346C7 /* RepositoriesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF9A911E4B06C003346C7 /* RepositoriesDelegate.m */; };
+		F43BF9BC11E4B10F003346C7 /* EMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF9BB11E4B10F003346C7 /* EMKeychain.m */; };
+		F43BF9C011E4B135003346C7 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43BF9BF11E4B135003346C7 /* Growl.framework */; };
+		F43BF9CB11E4B14A003346C7 /* Growl.framework in Copy Frameworks (2) */ = {isa = PBXBuildFile; fileRef = F43BF9BF11E4B135003346C7 /* Growl.framework */; };
+		F43BF9CD11E4B157003346C7 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */; };
+		F43BF9FF11E4B15B003346C7 /* BWToolkitFramework.framework in Copy Frameworks (2) */ = {isa = PBXBuildFile; fileRef = F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */; };
+		F43BFA0511E4B1A7003346C7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43BFA0411E4B1A7003346C7 /* Security.framework */; };
+		F43BFAB611E4B26C003346C7 /* AccountSetup.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43BFAB511E4B26C003346C7 /* AccountSetup.xib */; };
+		F4E0869311F0CA9300555607 /* NSWorkspaceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E0869211F0CA9300555607 /* NSWorkspaceHelper.m */; };
+		F4F6974811FC95AA006FDF65 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = F4F6974711FC95AA006FDF65 /* Credits.html */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F43BF9D011E4B157003346C7 /* Copy Frameworks (2) */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F43BF9FF11E4B15B003346C7 /* BWToolkitFramework.framework in Copy Frameworks (2) */,
+				F43BF9CB11E4B14A003346C7 /* Growl.framework in Copy Frameworks (2) */,
+			);
+			name = "Copy Frameworks (2)";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* GithubNotifier_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubNotifier_Prefix.pch; sourceTree = "<group>"; };
+		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		77C8280B06725ACE000B614F /* GithubNotifier_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubNotifier_AppDelegate.h; sourceTree = "<group>"; };
+		77C8280C06725ACE000B614F /* GithubNotifier_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubNotifier_AppDelegate.m; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* GithubNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40921C711E96048001550DC /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		F430F63611E36CA1000A7CFE /* NSColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+Hex.h"; path = "CocoaREST/Source/NSColor+Hex.h"; sourceTree = "<group>"; };
+		F430F63711E36CA1000A7CFE /* NSColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+Hex.m"; path = "CocoaREST/Source/NSColor+Hex.m"; sourceTree = "<group>"; };
+		F430F63811E36CA1000A7CFE /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "CocoaREST/Source/NSData+Base64.h"; sourceTree = "<group>"; };
+		F430F63911E36CA1000A7CFE /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "CocoaREST/Source/NSData+Base64.m"; sourceTree = "<group>"; };
+		F430F63A11E36CA1000A7CFE /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+UUID.h"; path = "CocoaREST/Source/NSString+UUID.h"; sourceTree = "<group>"; };
+		F430F63B11E36CA1000A7CFE /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+UUID.m"; path = "CocoaREST/Source/NSString+UUID.m"; sourceTree = "<group>"; };
+		F430F63C11E36CA1000A7CFE /* SDGithubTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDGithubTask.h; path = CocoaREST/Source/SDGithubTask.h; sourceTree = "<group>"; };
+		F430F63D11E36CA1000A7CFE /* SDGithubTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDGithubTask.m; path = CocoaREST/Source/SDGithubTask.m; sourceTree = "<group>"; };
+		F430F63E11E36CA1000A7CFE /* SDGithubTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDGithubTaskManager.h; path = CocoaREST/Source/SDGithubTaskManager.h; sourceTree = "<group>"; };
+		F430F63F11E36CA1000A7CFE /* SDGithubTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDGithubTaskManager.m; path = CocoaREST/Source/SDGithubTaskManager.m; sourceTree = "<group>"; };
+		F430F64011E36CA1000A7CFE /* SDNetTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDNetTask.h; path = CocoaREST/Source/SDNetTask.h; sourceTree = "<group>"; };
+		F430F64111E36CA1000A7CFE /* SDNetTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDNetTask.m; path = CocoaREST/Source/SDNetTask.m; sourceTree = "<group>"; };
+		F430F64211E36CA1000A7CFE /* SDNetTask+Subclassing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SDNetTask+Subclassing.h"; path = "CocoaREST/Source/SDNetTask+Subclassing.h"; sourceTree = "<group>"; };
+		F430F64311E36CA1000A7CFE /* SDNetTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDNetTaskManager.h; path = CocoaREST/Source/SDNetTaskManager.h; sourceTree = "<group>"; };
+		F430F64411E36CA1000A7CFE /* SDNetTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDNetTaskManager.m; path = CocoaREST/Source/SDNetTaskManager.m; sourceTree = "<group>"; };
+		F430F64511E36CA1000A7CFE /* yajl_alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_alloc.c; path = CocoaREST/Source/yajl_alloc.c; sourceTree = "<group>"; };
+		F430F64611E36CA1000A7CFE /* yajl_alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_alloc.h; path = CocoaREST/Source/yajl_alloc.h; sourceTree = "<group>"; };
+		F430F64711E36CA1000A7CFE /* yajl_buf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_buf.c; path = CocoaREST/Source/yajl_buf.c; sourceTree = "<group>"; };
+		F430F64811E36CA1000A7CFE /* yajl_buf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_buf.h; path = CocoaREST/Source/yajl_buf.h; sourceTree = "<group>"; };
+		F430F64911E36CA1000A7CFE /* yajl_bytestack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_bytestack.h; path = CocoaREST/Source/yajl_bytestack.h; sourceTree = "<group>"; };
+		F430F64A11E36CA1000A7CFE /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_common.h; path = CocoaREST/Source/yajl_common.h; sourceTree = "<group>"; };
+		F430F64B11E36CA1000A7CFE /* yajl_encode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_encode.c; path = CocoaREST/Source/yajl_encode.c; sourceTree = "<group>"; };
+		F430F64C11E36CA1000A7CFE /* yajl_encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_encode.h; path = CocoaREST/Source/yajl_encode.h; sourceTree = "<group>"; };
+		F430F64D11E36CA1000A7CFE /* yajl_gen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_gen.c; path = CocoaREST/Source/yajl_gen.c; sourceTree = "<group>"; };
+		F430F64E11E36CA1000A7CFE /* yajl_gen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_gen.h; path = CocoaREST/Source/yajl_gen.h; sourceTree = "<group>"; };
+		F430F64F11E36CA1000A7CFE /* yajl_lex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_lex.c; path = CocoaREST/Source/yajl_lex.c; sourceTree = "<group>"; };
+		F430F65011E36CA1000A7CFE /* yajl_lex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_lex.h; path = CocoaREST/Source/yajl_lex.h; sourceTree = "<group>"; };
+		F430F65111E36CA1000A7CFE /* yajl_parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_parse.h; path = CocoaREST/Source/yajl_parse.h; sourceTree = "<group>"; };
+		F430F65211E36CA1000A7CFE /* yajl_parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_parser.c; path = CocoaREST/Source/yajl_parser.c; sourceTree = "<group>"; };
+		F430F65311E36CA1000A7CFE /* yajl_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_parser.h; path = CocoaREST/Source/yajl_parser.h; sourceTree = "<group>"; };
+		F430F65411E36CA1000A7CFE /* yajl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl.c; path = CocoaREST/Source/yajl.c; sourceTree = "<group>"; };
+		F430F65511E36CA1000A7CFE /* YAJLDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YAJLDecoder.h; path = CocoaREST/Source/YAJLDecoder.h; sourceTree = "<group>"; };
+		F430F65611E36CA1000A7CFE /* YAJLDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YAJLDecoder.m; path = CocoaREST/Source/YAJLDecoder.m; sourceTree = "<group>"; };
+		F430F67511E36CEF000A7CFE /* GithubNotifier_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = GithubNotifier_DataModel.xcdatamodel; sourceTree = "<group>"; };
+		F43BF98C11E4AF81003346C7 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
+		F43BF98D11E4AF81003346C7 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
+		F43BF99311E4B00C003346C7 /* GithubUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubUser.h; sourceTree = "<group>"; };
+		F43BF99411E4B00C003346C7 /* GithubUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubUser.m; sourceTree = "<group>"; };
+		F43BF99A11E4B024003346C7 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		F43BF99B11E4B024003346C7 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		F43BF9A111E4B06C003346C7 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
+		F43BF9A211E4B06C003346C7 /* GrowlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlManager.h; sourceTree = "<group>"; };
+		F43BF9A311E4B06C003346C7 /* GrowlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlManager.m; sourceTree = "<group>"; };
+		F43BF9A411E4B06C003346C7 /* NetworkDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkDataDelegate.h; sourceTree = "<group>"; };
+		F43BF9A511E4B06C003346C7 /* NetworkDataDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkDataDelegate.m; sourceTree = "<group>"; };
+		F43BF9A611E4B06C003346C7 /* NetworkMetaDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkMetaDelegate.h; sourceTree = "<group>"; };
+		F43BF9A711E4B06C003346C7 /* NetworkMetaDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkMetaDelegate.m; sourceTree = "<group>"; };
+		F43BF9A811E4B06C003346C7 /* RepositoriesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoriesDelegate.h; sourceTree = "<group>"; };
+		F43BF9A911E4B06C003346C7 /* RepositoriesDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoriesDelegate.m; sourceTree = "<group>"; };
+		F43BF9B011E4B086003346C7 /* GithubNotifier-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GithubNotifier-Info.plist"; sourceTree = "<group>"; };
+		F43BF9BA11E4B10F003346C7 /* EMKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMKeychain.h; path = EMKeychain/EMKeychain.h; sourceTree = "<group>"; };
+		F43BF9BB11E4B10F003346C7 /* EMKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMKeychain.m; path = EMKeychain/EMKeychain.m; sourceTree = "<group>"; };
+		F43BF9BF11E4B135003346C7 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = ThirdPartyFrameworks/Growl.framework; sourceTree = DEVELOPER_DIR; };
+		F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = ThirdPartyFrameworks/BWToolkitFramework.framework; sourceTree = DEVELOPER_DIR; };
+		F43BFA0411E4B1A7003346C7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F43BFAB511E4B26C003346C7 /* AccountSetup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSetup.xib; sourceTree = "<group>"; };
+		F4E0869111F0CA9300555607 /* NSWorkspaceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSWorkspaceHelper.h; sourceTree = "<group>"; };
+		F4E0869211F0CA9300555607 /* NSWorkspaceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSWorkspaceHelper.m; sourceTree = "<group>"; };
+		F4F6974711FC95AA006FDF65 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				F43BF9C011E4B135003346C7 /* Growl.framework in Frameworks */,
+				F43BF9CD11E4B157003346C7 /* BWToolkitFramework.framework in Frameworks */,
+				F43BFA0511E4B1A7003346C7 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F43BF99311E4B00C003346C7 /* GithubUser.h */,
+				F43BF99411E4B00C003346C7 /* GithubUser.m */,
+				77C8280B06725ACE000B614F /* GithubNotifier_AppDelegate.h */,
+				77C8280C06725ACE000B614F /* GithubNotifier_AppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				F43BF9BF11E4B135003346C7 /* Growl.framework */,
+				F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */,
+				F43BFA0411E4B1A7003346C7 /* Security.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77C82804067257F0000B614F /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* GithubNotifier.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Boulevard */ = {
+			isa = PBXGroup;
+			children = (
+				F43BF99F11E4B02F003346C7 /* Delegates */,
+				F43BF98B11E4AF6B003346C7 /* Controllers */,
+				F430F63411E36C66000A7CFE /* lib */,
+				7756732906782D8800D1FEB8 /* Models */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Boulevard;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* GithubNotifier_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F4F6974711FC95AA006FDF65 /* Credits.html */,
+				F43BFAB511E4B26C003346C7 /* AccountSetup.xib */,
+				F43BF9A111E4B06C003346C7 /* Growl Registration Ticket.growlRegDict */,
+				F43BF9B011E4B086003346C7 /* GithubNotifier-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
+				F40921C711E96048001550DC /* Preferences.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7756732906782D8800D1FEB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F430F67511E36CEF000A7CFE /* GithubNotifier_DataModel.xcdatamodel */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F430F63411E36C66000A7CFE /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				F43BF9B911E4B103003346C7 /* EMKeychain */,
+				F430F63511E36C6D000A7CFE /* CocoaREST */,
+				F4E0869111F0CA9300555607 /* NSWorkspaceHelper.h */,
+				F4E0869211F0CA9300555607 /* NSWorkspaceHelper.m */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		F430F63511E36C6D000A7CFE /* CocoaREST */ = {
+			isa = PBXGroup;
+			children = (
+				F430F63611E36CA1000A7CFE /* NSColor+Hex.h */,
+				F430F63711E36CA1000A7CFE /* NSColor+Hex.m */,
+				F430F63811E36CA1000A7CFE /* NSData+Base64.h */,
+				F430F63911E36CA1000A7CFE /* NSData+Base64.m */,
+				F430F63A11E36CA1000A7CFE /* NSString+UUID.h */,
+				F430F63B11E36CA1000A7CFE /* NSString+UUID.m */,
+				F430F63C11E36CA1000A7CFE /* SDGithubTask.h */,
+				F430F63D11E36CA1000A7CFE /* SDGithubTask.m */,
+				F430F63E11E36CA1000A7CFE /* SDGithubTaskManager.h */,
+				F430F63F11E36CA1000A7CFE /* SDGithubTaskManager.m */,
+				F430F64011E36CA1000A7CFE /* SDNetTask.h */,
+				F430F64111E36CA1000A7CFE /* SDNetTask.m */,
+				F430F64211E36CA1000A7CFE /* SDNetTask+Subclassing.h */,
+				F430F64311E36CA1000A7CFE /* SDNetTaskManager.h */,
+				F430F64411E36CA1000A7CFE /* SDNetTaskManager.m */,
+				F430F64511E36CA1000A7CFE /* yajl_alloc.c */,
+				F430F64611E36CA1000A7CFE /* yajl_alloc.h */,
+				F430F64711E36CA1000A7CFE /* yajl_buf.c */,
+				F430F64811E36CA1000A7CFE /* yajl_buf.h */,
+				F430F64911E36CA1000A7CFE /* yajl_bytestack.h */,
+				F430F64A11E36CA1000A7CFE /* yajl_common.h */,
+				F430F64B11E36CA1000A7CFE /* yajl_encode.c */,
+				F430F64C11E36CA1000A7CFE /* yajl_encode.h */,
+				F430F64D11E36CA1000A7CFE /* yajl_gen.c */,
+				F430F64E11E36CA1000A7CFE /* yajl_gen.h */,
+				F430F64F11E36CA1000A7CFE /* yajl_lex.c */,
+				F430F65011E36CA1000A7CFE /* yajl_lex.h */,
+				F430F65111E36CA1000A7CFE /* yajl_parse.h */,
+				F430F65211E36CA1000A7CFE /* yajl_parser.c */,
+				F430F65311E36CA1000A7CFE /* yajl_parser.h */,
+				F430F65411E36CA1000A7CFE /* yajl.c */,
+				F430F65511E36CA1000A7CFE /* YAJLDecoder.h */,
+				F430F65611E36CA1000A7CFE /* YAJLDecoder.m */,
+			);
+			name = CocoaREST;
+			sourceTree = "<group>";
+		};
+		F43BF98B11E4AF6B003346C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F43BF9A211E4B06C003346C7 /* GrowlManager.h */,
+				F43BF9A311E4B06C003346C7 /* GrowlManager.m */,
+				F43BF99A11E4B024003346C7 /* AppController.h */,
+				F43BF99B11E4B024003346C7 /* AppController.m */,
+				F43BF98C11E4AF81003346C7 /* PreferencesWindowController.h */,
+				F43BF98D11E4AF81003346C7 /* PreferencesWindowController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F43BF99F11E4B02F003346C7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F43BF9A411E4B06C003346C7 /* NetworkDataDelegate.h */,
+				F43BF9A511E4B06C003346C7 /* NetworkDataDelegate.m */,
+				F43BF9A611E4B06C003346C7 /* NetworkMetaDelegate.h */,
+				F43BF9A711E4B06C003346C7 /* NetworkMetaDelegate.m */,
+				F43BF9A811E4B06C003346C7 /* RepositoriesDelegate.h */,
+				F43BF9A911E4B06C003346C7 /* RepositoriesDelegate.m */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		F43BF9B911E4B103003346C7 /* EMKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				F43BF9BA11E4B10F003346C7 /* EMKeychain.h */,
+				F43BF9BB11E4B10F003346C7 /* EMKeychain.m */,
+			);
+			name = EMKeychain;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* GithubNotifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "GithubNotifier" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				F43BF9D011E4B157003346C7 /* Copy Frameworks (2) */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GithubNotifier;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Boulevard;
+			productReference = 8D1107320486CEB800E47090 /* GithubNotifier.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "scary-robot";
+			};
+			buildConfigurationList = 26FC0A880875C7B200E6366F /* Build configuration list for PBXProject "GithubNotifier" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Boulevard */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* GithubNotifier */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
+				F43BF9AB11E4B06C003346C7 /* Growl Registration Ticket.growlRegDict in Resources */,
+				F43BFAB611E4B26C003346C7 /* AccountSetup.xib in Resources */,
+				F40921C811E96048001550DC /* Preferences.xib in Resources */,
+				F4F6974811FC95AA006FDF65 /* Credits.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				77C8280E06725ACE000B614F /* GithubNotifier_AppDelegate.m in Sources */,
+				F430F65711E36CA1000A7CFE /* NSColor+Hex.m in Sources */,
+				F430F65811E36CA1000A7CFE /* NSData+Base64.m in Sources */,
+				F430F65911E36CA1000A7CFE /* NSString+UUID.m in Sources */,
+				F430F65A11E36CA1000A7CFE /* SDGithubTask.m in Sources */,
+				F430F65B11E36CA1000A7CFE /* SDGithubTaskManager.m in Sources */,
+				F430F65C11E36CA1000A7CFE /* SDNetTask.m in Sources */,
+				F430F65D11E36CA1000A7CFE /* SDNetTaskManager.m in Sources */,
+				F430F65E11E36CA1000A7CFE /* yajl_alloc.c in Sources */,
+				F430F65F11E36CA1000A7CFE /* yajl_buf.c in Sources */,
+				F430F66011E36CA1000A7CFE /* yajl_encode.c in Sources */,
+				F430F66111E36CA1000A7CFE /* yajl_gen.c in Sources */,
+				F430F66211E36CA1000A7CFE /* yajl_lex.c in Sources */,
+				F430F66311E36CA1000A7CFE /* yajl_parser.c in Sources */,
+				F430F66411E36CA1000A7CFE /* yajl.c in Sources */,
+				F430F66511E36CA1000A7CFE /* YAJLDecoder.m in Sources */,
+				F430F67611E36CEF000A7CFE /* GithubNotifier_DataModel.xcdatamodel in Sources */,
+				F43BF98E11E4AF81003346C7 /* PreferencesWindowController.m in Sources */,
+				F43BF99511E4B00C003346C7 /* GithubUser.m in Sources */,
+				F43BF99C11E4B024003346C7 /* AppController.m in Sources */,
+				F43BF9AC11E4B06C003346C7 /* GrowlManager.m in Sources */,
+				F43BF9AD11E4B06C003346C7 /* NetworkDataDelegate.m in Sources */,
+				F43BF9AE11E4B06C003346C7 /* NetworkMetaDelegate.m in Sources */,
+				F43BF9AF11E4B06C003346C7 /* RepositoriesDelegate.m in Sources */,
+				F43BF9BC11E4B10F003346C7 /* EMKeychain.m in Sources */,
+				F4E0869311F0CA9300555607 /* NSWorkspaceHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2F7446970DB6B7EA00F9684A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F7446980DB6B7EA00F9684A /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26FC0A850875C7B200E6366F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/ThirdPartyFrameworks\"",
+					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Versions/A/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GithubNotifier_Prefix.pch;
+				INFOPLIST_FILE = "GithubNotifier-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = GithubNotifier;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		26FC0A860875C7B200E6366F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/ThirdPartyFrameworks\"",
+					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Versions/A/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GithubNotifier_Prefix.pch;
+				INFOPLIST_FILE = "GithubNotifier-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = GithubNotifier;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		26FC0A890875C7B200E6366F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		26FC0A8A0875C7B200E6366F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "scary-robot-development";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "GithubNotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FC0A850875C7B200E6366F /* Debug */,
+				26FC0A860875C7B200E6366F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26FC0A880875C7B200E6366F /* Build configuration list for PBXProject "GithubNotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FC0A890875C7B200E6366F /* Debug */,
+				26FC0A8A0875C7B200E6366F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
