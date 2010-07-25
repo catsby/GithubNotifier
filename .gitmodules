@@ -1,0 +1,6 @@
+[submodule "EMKeychain"]
+	path = EMKeychain
+	url = git://github.com/ctshryock/EMKeychain.git
+[submodule "CocoaREST"]
+	path = CocoaREST
+	url = git://github.com/ctshryock/CocoaREST.git
