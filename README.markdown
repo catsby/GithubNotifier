@@ -10,7 +10,7 @@ GithubNotifier is a menu-bar app that checks your Github account for network act
 
 Patches / bugs welcome.
 To get setup for development, be sure to run 
-`get submodule init` && `git submodule update` to pull down the latest `CocoaREST` and `EMKeychain` files
+`git submodule init` && `git submodule update` to pull down the latest `CocoaREST` and `EMKeychain` files
 
 
 #Credits:
