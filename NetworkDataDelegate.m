@@ -26,7 +26,7 @@
 	NSLog(@"time key at start: %@", timeKey);
 	if ([timeKey isNotEqualTo:[NSNumber numberWithInt:0]]) {
 		NSMutableArray *networkPushes = [NSMutableArray array];
-		NSLog(@"%@ commits to parse: %d", [self.repository valueForKey:@"name"], [task.results count]);
+		NSLog(@"%@ commits to parse: %lx", [self.repository valueForKey:@"name"], (unsigned long)[task.results count]);
 		for (NSMutableDictionary *commit  in [task.results objectForKey:@"commits"]) {
 			NSNumber *key = [commit valueForKey:@"time"];
 			if ([key isGreaterThan:[self.repository valueForKey:@"timeKey"]]) {
