@@ -48,8 +48,9 @@
 	NSNumber *count = [userInfo objectForKey:@"additions"];
 	NSMutableDictionary *context = [NSMutableDictionary dictionary];
 	[context setObject:[userInfo objectForKey:@"username"] forKey:@"username"];
+	NSString *variableDesc = ([count intValue] > 1) ? @"repositories were" : @"repository was"; 
 	[GrowlApplicationBridge notifyWithTitle:@"Your repositories have changed"
-								description:[NSString stringWithFormat:@"%@ repositories were added", count]
+								description:[NSString stringWithFormat:@"%@ %@ added", count, variableDesc]
 						   notificationName:@"Repositories Changed"
 								   iconData:nil
 								   priority:0
@@ -64,8 +65,9 @@
 	
 	NSNumber *count = [userInfo objectForKey:@"subtractions"];
 	
+	NSString *variableDesc = ([count intValue] > 1) ? @"repositories were" : @"repository was"; 
 	[GrowlApplicationBridge notifyWithTitle:@"Your repositories have changed"
-								description:[NSString stringWithFormat:@"%@ repositories were removed", count]
+								description:[NSString stringWithFormat:@"%@ %@ removed", count, variableDesc]
 						   notificationName:@"Repositories Changed"
 								   iconData:nil
 								   priority:0
