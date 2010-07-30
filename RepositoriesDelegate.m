@@ -49,7 +49,7 @@
 - (void) githubManager:(SDGithubTaskManager*)manager failedForTask:(SDGithubTask*)task {
 	self.results = nil;
 	
-	NSLog(@"failed");
+	NSLog(@"failed to fetch repositories");
 }
 
 #pragma mark -
@@ -65,9 +65,12 @@
 	NSMutableDictionary *repositoryChanges = [NSMutableDictionary dictionaryWithCapacity:2];
 	[repositoryChanges setObject:username forKey:@"username"];
     
+
+	//	Subtract the current set of repositories on disk from the list 
+	//	retrieved from the server.  If there are any left over, then 
+	//	we've added new repositories since last update
     [remoteSet minusSet:currentSet];
 	if (0 < [remoteSet count]) {
-		NSLog(@"excecuting growl notification");
 		[repositoryChanges setObject:[NSNumber numberWithInt:[remoteSet count]] forKey:@"additions"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:GITHUB_NOTIFICATION_REPOSITORIES_ADDED 
 															object:self 
@@ -80,12 +83,10 @@
 	NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
     [currentSet minusSet:remoteSet];
     for (NSManagedObject *orphan in currentSet) {
-        NSLog(@"Deleting %@", [orphan valueForKey:@"name"]);
         [moc deleteObject:orphan];
     }
 	
 	if (0 < [currentSet count]) {
-		NSLog(@"excecuting growl notification for removals");
 		[repositoryChanges setObject:[NSNumber numberWithInt:[currentSet count]] forKey:@"subtractions"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:GITHUB_NOTIFICATION_REPOSITORIES_REMOVED 
 															object:self 
