@@ -8,8 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class SDGithubTaskManager;
-@class RepositoriesDelegate;
+@class RepositoriesController;
 @class GithubUser;
 @class GrowlManager;
 
@@ -17,20 +16,16 @@
 	GrowlManager *growlManager;
 	NSArrayController *repositoryArrayController;
 	
-	//	Main Github task manager
-	SDGithubTaskManager *mainTaskManager;
-	
-	//	Delegate objects
-	RepositoriesDelegate *mainRepositoriesDelegate;
-	
 	NSTimer *repeatingTimer;
+	
+	RepositoriesController *repositoriesController;
 }
 
 @property (nonatomic, retain) IBOutlet GrowlManager *growlManager;
 @property (nonatomic, retain) IBOutlet NSArrayController *repositoryArrayController;
 
-@property (retain) SDGithubTaskManager *mainTaskManager;
-@property (retain) RepositoriesDelegate *mainRepositoriesDelegate;
+
+@property (nonatomic, retain) RepositoriesController *repositoriesController;
 
 @property (assign) NSTimer *repeatingTimer;
 

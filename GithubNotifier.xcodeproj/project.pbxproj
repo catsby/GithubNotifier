@@ -44,6 +44,7 @@
 		F43BF9FF11E4B15B003346C7 /* BWToolkitFramework.framework in Copy Frameworks (2) */ = {isa = PBXBuildFile; fileRef = F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */; };
 		F43BFA0511E4B1A7003346C7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43BFA0411E4B1A7003346C7 /* Security.framework */; };
 		F43BFAB611E4B26C003346C7 /* AccountSetup.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43BFAB511E4B26C003346C7 /* AccountSetup.xib */; };
+		F464546D1254BDC100D17734 /* RepositoriesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F464546C1254BDC100D17734 /* RepositoriesController.m */; };
 		F4E0869311F0CA9300555607 /* NSWorkspaceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E0869211F0CA9300555607 /* NSWorkspaceHelper.m */; };
 		F4F6974811FC95AA006FDF65 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = F4F6974711FC95AA006FDF65 /* Credits.html */; };
 /* End PBXBuildFile section */
@@ -132,6 +133,8 @@
 		F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = ThirdPartyFrameworks/BWToolkitFramework.framework; sourceTree = DEVELOPER_DIR; };
 		F43BFA0411E4B1A7003346C7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F43BFAB511E4B26C003346C7 /* AccountSetup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSetup.xib; sourceTree = "<group>"; };
+		F464546B1254BDC100D17734 /* RepositoriesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoriesController.h; sourceTree = "<group>"; };
+		F464546C1254BDC100D17734 /* RepositoriesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoriesController.m; sourceTree = "<group>"; };
 		F4E0869111F0CA9300555607 /* NSWorkspaceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSWorkspaceHelper.h; sourceTree = "<group>"; };
 		F4E0869211F0CA9300555607 /* NSWorkspaceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSWorkspaceHelper.m; sourceTree = "<group>"; };
 		F4F6974711FC95AA006FDF65 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
@@ -308,6 +311,8 @@
 				F43BF99B11E4B024003346C7 /* AppController.m */,
 				F43BF98C11E4AF81003346C7 /* PreferencesWindowController.h */,
 				F43BF98D11E4AF81003346C7 /* PreferencesWindowController.m */,
+				F464546B1254BDC100D17734 /* RepositoriesController.h */,
+				F464546C1254BDC100D17734 /* RepositoriesController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -366,7 +371,14 @@
 			};
 			buildConfigurationList = 26FC0A880875C7B200E6366F /* Build configuration list for PBXProject "GithubNotifier" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Boulevard */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -424,6 +436,7 @@
 				F43BF9AF11E4B06C003346C7 /* RepositoriesDelegate.m in Sources */,
 				F43BF9BC11E4B10F003346C7 /* EMKeychain.m in Sources */,
 				F4E0869311F0CA9300555607 /* NSWorkspaceHelper.m in Sources */,
+				F464546D1254BDC100D17734 /* RepositoriesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
