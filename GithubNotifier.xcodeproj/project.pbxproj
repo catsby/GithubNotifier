@@ -12,6 +12,9 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		F403150C1259105800BE7410 /* CSManagedRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = F403150B1259105800BE7410 /* CSManagedRepository.m */; };
+		F403154A125912CC00BE7410 /* GithubNotifier_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4031549125912CC00BE7410 /* GithubNotifier_DataModel.xcdatamodeld */; };
+		F40315AF1259152300BE7410 /* WatcherCount.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F40315AE1259152300BE7410 /* WatcherCount.xcmappingmodel */; };
 		F40921C811E96048001550DC /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40921C711E96048001550DC /* Preferences.xib */; };
 		F430F65711E36CA1000A7CFE /* NSColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = F430F63711E36CA1000A7CFE /* NSColor+Hex.m */; };
 		F430F65811E36CA1000A7CFE /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = F430F63911E36CA1000A7CFE /* NSData+Base64.m */; };
@@ -28,7 +31,6 @@
 		F430F66311E36CA1000A7CFE /* yajl_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = F430F65211E36CA1000A7CFE /* yajl_parser.c */; };
 		F430F66411E36CA1000A7CFE /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = F430F65411E36CA1000A7CFE /* yajl.c */; };
 		F430F66511E36CA1000A7CFE /* YAJLDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F430F65611E36CA1000A7CFE /* YAJLDecoder.m */; };
-		F430F67611E36CEF000A7CFE /* GithubNotifier_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F430F67511E36CEF000A7CFE /* GithubNotifier_DataModel.xcdatamodel */; };
 		F43BF98E11E4AF81003346C7 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF98D11E4AF81003346C7 /* PreferencesWindowController.m */; };
 		F43BF99511E4B00C003346C7 /* GithubUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF99411E4B00C003346C7 /* GithubUser.m */; };
 		F43BF99C11E4B024003346C7 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF99B11E4B024003346C7 /* AppController.m */; };
@@ -76,6 +78,10 @@
 		77C8280B06725ACE000B614F /* GithubNotifier_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubNotifier_AppDelegate.h; sourceTree = "<group>"; };
 		77C8280C06725ACE000B614F /* GithubNotifier_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubNotifier_AppDelegate.m; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* GithubNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F403150A1259105800BE7410 /* CSManagedRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSManagedRepository.h; sourceTree = "<group>"; };
+		F403150B1259105800BE7410 /* CSManagedRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSManagedRepository.m; sourceTree = "<group>"; };
+		F40315AD1259150400BE7410 /* GithubNotifier_DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GithubNotifier_DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		F40315AE1259152300BE7410 /* WatcherCount.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = WatcherCount.xcmappingmodel; sourceTree = "<group>"; };
 		F40921C711E96048001550DC /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		F430F63611E36CA1000A7CFE /* NSColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+Hex.h"; path = "CocoaREST/Source/NSColor+Hex.h"; sourceTree = "<group>"; };
 		F430F63711E36CA1000A7CFE /* NSColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+Hex.m"; path = "CocoaREST/Source/NSColor+Hex.m"; sourceTree = "<group>"; };
@@ -246,9 +252,33 @@
 		7756732906782D8800D1FEB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F430F67511E36CEF000A7CFE /* GithubNotifier_DataModel.xcdatamodel */,
+				F40315091259105100BE7410 /* Classes */,
+				F4031549125912CC00BE7410 /* GithubNotifier_DataModel.xcdatamodeld */,
+				F40315AE1259152300BE7410 /* WatcherCount.xcmappingmodel */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		F40314D812590E6300BE7410 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F43BF9A211E4B06C003346C7 /* GrowlManager.h */,
+				F43BF9A311E4B06C003346C7 /* GrowlManager.m */,
+				F43BF99A11E4B024003346C7 /* AppController.h */,
+				F43BF99B11E4B024003346C7 /* AppController.m */,
+				F43BF98C11E4AF81003346C7 /* PreferencesWindowController.h */,
+				F43BF98D11E4AF81003346C7 /* PreferencesWindowController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		F40315091259105100BE7410 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F403150A1259105800BE7410 /* CSManagedRepository.h */,
+				F403150B1259105800BE7410 /* CSManagedRepository.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		F430F63411E36C66000A7CFE /* lib */ = {
@@ -305,12 +335,7 @@
 		F43BF98B11E4AF6B003346C7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F43BF9A211E4B06C003346C7 /* GrowlManager.h */,
-				F43BF9A311E4B06C003346C7 /* GrowlManager.m */,
-				F43BF99A11E4B024003346C7 /* AppController.h */,
-				F43BF99B11E4B024003346C7 /* AppController.m */,
-				F43BF98C11E4AF81003346C7 /* PreferencesWindowController.h */,
-				F43BF98D11E4AF81003346C7 /* PreferencesWindowController.m */,
+				F40314D812590E6300BE7410 /* Main */,
 				F464546B1254BDC100D17734 /* RepositoriesController.h */,
 				F464546C1254BDC100D17734 /* RepositoriesController.m */,
 			);
@@ -426,7 +451,7 @@
 				F430F66311E36CA1000A7CFE /* yajl_parser.c in Sources */,
 				F430F66411E36CA1000A7CFE /* yajl.c in Sources */,
 				F430F66511E36CA1000A7CFE /* YAJLDecoder.m in Sources */,
-				F430F67611E36CEF000A7CFE /* GithubNotifier_DataModel.xcdatamodel in Sources */,
+				F403154A125912CC00BE7410 /* GithubNotifier_DataModel.xcdatamodeld in Sources */,
 				F43BF98E11E4AF81003346C7 /* PreferencesWindowController.m in Sources */,
 				F43BF99511E4B00C003346C7 /* GithubUser.m in Sources */,
 				F43BF99C11E4B024003346C7 /* AppController.m in Sources */,
@@ -437,6 +462,8 @@
 				F43BF9BC11E4B10F003346C7 /* EMKeychain.m in Sources */,
 				F4E0869311F0CA9300555607 /* NSWorkspaceHelper.m in Sources */,
 				F464546D1254BDC100D17734 /* RepositoriesController.m in Sources */,
+				F403150C1259105800BE7410 /* CSManagedRepository.m in Sources */,
+				F40315AF1259152300BE7410 /* WatcherCount.xcmappingmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +588,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F4031549125912CC00BE7410 /* GithubNotifier_DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F430F67511E36CEF000A7CFE /* GithubNotifier_DataModel.xcdatamodel */,
+				F40315AD1259150400BE7410 /* GithubNotifier_DataModel 2.xcdatamodel */,
+			);
+			currentVersion = F40315AD1259150400BE7410 /* GithubNotifier_DataModel 2.xcdatamodel */;
+			path = GithubNotifier_DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }

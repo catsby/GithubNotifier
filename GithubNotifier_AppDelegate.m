@@ -77,10 +77,13 @@
     
     NSURL *url = [NSURL fileURLWithPath: [applicationSupportDirectory stringByAppendingPathComponent: @"storedata"]];
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: mom];
+	NSDictionary *optionsDictionary =
+    [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES]
+								forKey:NSMigratePersistentStoresAutomaticallyOption];
     if (![persistentStoreCoordinator addPersistentStoreWithType:NSXMLStoreType 
                                                 configuration:nil 
                                                 URL:url 
-                                                options:nil 
+                                                options:optionsDictionary 
                                                 error:&error]){
         [[NSApplication sharedApplication] presentError:error];
         [persistentStoreCoordinator release], persistentStoreCoordinator = nil;
