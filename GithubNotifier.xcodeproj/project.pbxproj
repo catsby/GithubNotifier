@@ -48,6 +48,10 @@
 		F43BFAB611E4B26C003346C7 /* AccountSetup.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43BFAB511E4B26C003346C7 /* AccountSetup.xib */; };
 		F464546D1254BDC100D17734 /* RepositoriesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F464546C1254BDC100D17734 /* RepositoriesController.m */; };
 		F4E0869311F0CA9300555607 /* NSWorkspaceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E0869211F0CA9300555607 /* NSWorkspaceHelper.m */; };
+		F4EAE8C9125B4E5C00300F65 /* WatcherList.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F4EAE8C8125B4E5C00300F65 /* WatcherList.xcmappingmodel */; };
+		F4EAE8E4125B4FF400300F65 /* ObjectDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EAE8E3125B4FF400300F65 /* ObjectDelegate.m */; };
+		F4EAE8E7125B4FFC00300F65 /* CollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EAE8E6125B4FFC00300F65 /* CollectionDelegate.m */; };
+		F4EAE91D125B51C600300F65 /* RepositoryWatchersDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EAE91C125B51C600300F65 /* RepositoryWatchersDelegate.m */; };
 		F4F6974811FC95AA006FDF65 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = F4F6974711FC95AA006FDF65 /* Credits.html */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +147,14 @@
 		F464546C1254BDC100D17734 /* RepositoriesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoriesController.m; sourceTree = "<group>"; };
 		F4E0869111F0CA9300555607 /* NSWorkspaceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSWorkspaceHelper.h; sourceTree = "<group>"; };
 		F4E0869211F0CA9300555607 /* NSWorkspaceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSWorkspaceHelper.m; sourceTree = "<group>"; };
+		F4EAE8C6125B4E2800300F65 /* GithubNotifier_DataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GithubNotifier_DataModel 3.xcdatamodel"; sourceTree = "<group>"; };
+		F4EAE8C8125B4E5C00300F65 /* WatcherList.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = WatcherList.xcmappingmodel; sourceTree = "<group>"; };
+		F4EAE8E2125B4FF400300F65 /* ObjectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectDelegate.h; sourceTree = "<group>"; };
+		F4EAE8E3125B4FF400300F65 /* ObjectDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectDelegate.m; sourceTree = "<group>"; };
+		F4EAE8E5125B4FFC00300F65 /* CollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionDelegate.h; sourceTree = "<group>"; };
+		F4EAE8E6125B4FFC00300F65 /* CollectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionDelegate.m; sourceTree = "<group>"; };
+		F4EAE91B125B51C600300F65 /* RepositoryWatchersDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryWatchersDelegate.h; sourceTree = "<group>"; };
+		F4EAE91C125B51C600300F65 /* RepositoryWatchersDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryWatchersDelegate.m; sourceTree = "<group>"; };
 		F4F6974711FC95AA006FDF65 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -255,6 +267,7 @@
 				F40315091259105100BE7410 /* Classes */,
 				F4031549125912CC00BE7410 /* GithubNotifier_DataModel.xcdatamodeld */,
 				F40315AE1259152300BE7410 /* WatcherCount.xcmappingmodel */,
+				F4EAE8C8125B4E5C00300F65 /* WatcherList.xcmappingmodel */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -351,6 +364,12 @@
 				F43BF9A711E4B06C003346C7 /* NetworkMetaDelegate.m */,
 				F43BF9A811E4B06C003346C7 /* RepositoriesDelegate.h */,
 				F43BF9A911E4B06C003346C7 /* RepositoriesDelegate.m */,
+				F4EAE8E2125B4FF400300F65 /* ObjectDelegate.h */,
+				F4EAE8E3125B4FF400300F65 /* ObjectDelegate.m */,
+				F4EAE8E5125B4FFC00300F65 /* CollectionDelegate.h */,
+				F4EAE8E6125B4FFC00300F65 /* CollectionDelegate.m */,
+				F4EAE91B125B51C600300F65 /* RepositoryWatchersDelegate.h */,
+				F4EAE91C125B51C600300F65 /* RepositoryWatchersDelegate.m */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -464,6 +483,10 @@
 				F464546D1254BDC100D17734 /* RepositoriesController.m in Sources */,
 				F403150C1259105800BE7410 /* CSManagedRepository.m in Sources */,
 				F40315AF1259152300BE7410 /* WatcherCount.xcmappingmodel in Sources */,
+				F4EAE8C9125B4E5C00300F65 /* WatcherList.xcmappingmodel in Sources */,
+				F4EAE8E4125B4FF400300F65 /* ObjectDelegate.m in Sources */,
+				F4EAE8E7125B4FFC00300F65 /* CollectionDelegate.m in Sources */,
+				F4EAE91D125B51C600300F65 /* RepositoryWatchersDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,8 +618,9 @@
 			children = (
 				F430F67511E36CEF000A7CFE /* GithubNotifier_DataModel.xcdatamodel */,
 				F40315AD1259150400BE7410 /* GithubNotifier_DataModel 2.xcdatamodel */,
+				F4EAE8C6125B4E2800300F65 /* GithubNotifier_DataModel 3.xcdatamodel */,
 			);
-			currentVersion = F40315AD1259150400BE7410 /* GithubNotifier_DataModel 2.xcdatamodel */;
+			currentVersion = F4EAE8C6125B4E2800300F65 /* GithubNotifier_DataModel 3.xcdatamodel */;
 			path = GithubNotifier_DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

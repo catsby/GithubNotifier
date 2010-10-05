@@ -12,9 +12,9 @@
 @interface CSManagedRepository : NSManagedObject {
 
 }
-
+@property (nonatomic, retain) NSNumber * watcherCount;
 @property (nonatomic, retain) NSNumber * isFork;
 
-@property (nonatomic, retain) NSNumber * watcherCount;
-
+//	Transformable Attributes
+@property (nonatomic, retain) NSMutableArray * watcherList;
 @end

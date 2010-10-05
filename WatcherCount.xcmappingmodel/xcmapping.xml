@@ -1,11 +1,11 @@
-<?xml version="1.0"?>
+<?xml version="1.0" standalone="yes"?>
 <!DOCTYPE database SYSTEM "file:///System/Library/DTDs/CoreData.dtd">
 
 <database>
     <databaseInfo>
         <version>134481920</version>
         <UUID>99335E58-3479-4752-85F8-5E90A62D6344</UUID>
-        <nextObjectID>127</nextObjectID>
+        <nextObjectID>129</nextObjectID>
         <metadata>
             <plist version="1.0">
                 <dict>
@@ -79,7 +79,7 @@
         <attribute name="destinationname" type="string">Repository</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z123"></relationship>
-        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z103 z118 z110 z102 z124 z119 z120 z112 z111 z117 z121 z115 z125 z116"></relationship>
+        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z120 z103 z102 z124 z125 z119 z116 z115 z111 z112 z118 z121 z110 z117"></relationship>
         <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING"></relationship>
     </object>
     <object type="XDDEVATTRIBUTEMAPPING" id="z109">
@@ -167,5 +167,12 @@ CBMUGRoiJywtMjZVJG51bGzVCQoLDA0ODxAREl8QEE5TRXhwcmVzc2lvblR5cGVeTlNTZWxlY3Rvck5h
     <object type="XDDEVATTRIBUTEMAPPING" id="z127">
         <attribute name="name" type="string">message</attribute>
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z104"></relationship>
+    </object>
+    <object type="XDDEVATTRIBUTEMAPPING" id="z128">
+        <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING"></relationship>
+    </object>
+    <object type="XDDEVATTRIBUTEMAPPING" id="z129">
+        <attribute name="name" type="string">watcherList</attribute>
+        <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING"></relationship>
     </object>
 </database>

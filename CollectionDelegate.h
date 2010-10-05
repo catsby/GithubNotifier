@@ -7,10 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CSManagedRepository.h"
+#import "SDGithubTaskManager.h"
 
 
 @interface CollectionDelegate : NSObject {
-
+	NSArray *results;
+	CSManagedRepository *parentRepository;
 }
 
+@property (copy) NSArray *results;
+@property (nonatomic, retain) CSManagedRepository *parentRepository;
 @end

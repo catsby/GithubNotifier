@@ -7,16 +7,44 @@
 //
 
 #import "CSManagedRepository.h"
+
+#import "SDGithubTaskManager.h"
+#import "RepositoryWatchersDelegate.h"
+#import "GithubUser.h"
+
 @interface CSManagedRepository (CoreDataGeneratedPrimitiveAccessors)
 
 - (NSNumber *)primitiveWatcherCount;
 - (void)setPrimitiveWatcherCount:(NSNumber *)value;
+- (NSNumber *)primitiveIsFork;
+- (void)setPrimitiveIsFork:(NSNumber *)value;
 
 @end
 
 @implementation CSManagedRepository
 
-@synthesize isFork;
+@dynamic isFork;
+
+
+- (NSNumber *)isFork 
+{
+    NSNumber * tmpValue;
+    
+    [self willAccessValueForKey:@"isFork"];
+    tmpValue = [self primitiveIsFork];
+    [self didAccessValueForKey:@"isFork"];
+    
+    return tmpValue;
+}
+
+- (void)setIsFork:(NSNumber *)value 
+{
+    [self willChangeValueForKey:@"isFork"];
+    [self setPrimitiveIsFork:value];
+    [self didChangeValueForKey:@"isFork"];
+}
+
+@dynamic watcherList;
 
 @dynamic watcherCount;
 // coalesce these into one @interface CSManagedRepository (CoreDataGeneratedPrimitiveAccessors) section
@@ -35,9 +63,26 @@
 
 - (void)setWatcherCount:(NSNumber *)value 
 {
-	NSLog(@"isFork: %@", [self.isFork stringValue]);
 	if (![[self primitiveWatcherCount] isEqualToNumber:value] && ![self.isFork boolValue]) {
 		NSLog(@"watcher count has changed on an original repo");
+		GithubUser *githubUser = [GithubUser sharedInstance];
+		SDGithubTaskManager *watcherManager = [[SDGithubTaskManager manager] retain];
+        RepositoryWatchersDelegate *watcherDelegate = [[RepositoryWatchersDelegate alloc] init];
+		
+        watcherDelegate.parentRepository = self;
+        
+        watcherManager.delegate = watcherDelegate;
+        watcherManager.successSelector = @selector(githubManager:resultsReadyForTask:);
+        watcherManager.failSelector = @selector(githubManager:failedForTask:);
+        watcherManager.maxConcurrentTasks = 3;
+        watcherManager.username = githubUser.username;
+        watcherManager.password = githubUser.apiToken;
+        
+        SDGithubTask *basicTask = [SDGithubTask taskWithManager:watcherManager];
+        basicTask.user = [self valueForKey:@"owner"];
+        basicTask.repo = [self valueForKey:@"name"];
+        basicTask.type = SDGithubTaskGetRepoWatchers;
+        [basicTask run];
 	}
     [self willChangeValueForKey:@"watcherCount"];
     [self setPrimitiveWatcherCount:value];
