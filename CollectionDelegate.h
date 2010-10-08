@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "CSManagedRepository.h"
 #import "SDGithubTaskManager.h"
+#import "GrowlManager.h"
 
 
 @interface CollectionDelegate : NSObject {
@@ -18,4 +19,8 @@
 
 @property (copy) NSArray *results;
 @property (nonatomic, retain) CSManagedRepository *parentRepository;
+
+//	handle mergine a remote set with our local store
+- (NSDictionary *)mergeLocalStore:(NSArray *)local withRemoteResults:(NSArray *)remote;
+
 @end
