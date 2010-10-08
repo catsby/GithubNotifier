@@ -18,12 +18,16 @@
 - (void)setPrimitiveWatcherCount:(NSNumber *)value;
 - (NSNumber *)primitiveIsFork;
 - (void)setPrimitiveIsFork:(NSNumber *)value;
+- (id)primitiveWatcherList;
+- (void)setPrimitiveWatcherList:(id)value;
 
 @end
 
 @implementation CSManagedRepository
 
 @dynamic isFork;
+@dynamic watcherCount;
+@dynamic watcherList;
 
 
 - (NSNumber *)isFork 
@@ -44,12 +48,6 @@
     [self didChangeValueForKey:@"isFork"];
 }
 
-@dynamic watcherList;
-
-@dynamic watcherCount;
-// coalesce these into one @interface CSManagedRepository (CoreDataGeneratedPrimitiveAccessors) section
-
-
 - (NSNumber *)watcherCount 
 {
     NSNumber * tmpValue;
@@ -63,7 +61,7 @@
 
 - (void)setWatcherCount:(NSNumber *)value 
 {
-	if (![[self primitiveWatcherCount] isEqualToNumber:value] && ![self.isFork boolValue]) {
+	if ([value isGreaterThan:[self primitiveWatcherCount]]) {
 		NSLog(@"watcher count has changed on an original repo");
 		GithubUser *githubUser = [GithubUser sharedInstance];
 		SDGithubTaskManager *watcherManager = [[SDGithubTaskManager manager] retain];
@@ -93,6 +91,24 @@
 {
     // Insert custom validation logic here.
     return YES;
+}
+
+- (id)watcherList 
+{
+    id tmpValue;
+    
+    [self willAccessValueForKey:@"watcherList"];
+    tmpValue = [self primitiveWatcherList];
+    [self didAccessValueForKey:@"watcherList"];
+    
+    return tmpValue;
+}
+
+- (void)setWatcherList:(id)value 
+{
+    [self willChangeValueForKey:@"watcherList"];
+    [self setPrimitiveWatcherList:value];
+    [self didChangeValueForKey:@"watcherList"];
 }
 
 @end
