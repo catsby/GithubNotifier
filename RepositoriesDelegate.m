@@ -124,8 +124,9 @@
     [repository setValue:[data valueForKey:@"parent"] forKey:@"parent"];
     [repository setValue:[data valueForKey:@"source"] forKey:@"source"];
     [repository setValue:[data valueForKey:@"forks"] forKey:@"forks"];
-    //[repository setValue:[data valueForKey:@"watchers"] forKey:@"watchers"];    
 	repository.watcherCount = [data valueForKey:@"watchers"];
+//	repository.watcherCount = [NSNumber numberWithInt:1];
+//	repository.watcherList = nil;
     [repository setValue:[data valueForKey:@"homepage"] forKey:@"homepage"];    
 	NSNumber *isFork = [NSNumber numberWithUnsignedInt:[[data valueForKey:@"fork"] intValue]];
     [repository setValue:isFork forKey:@"isFork"];

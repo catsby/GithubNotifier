@@ -14,6 +14,7 @@
 - (void)notifyWithRepositoriesAdditions:(NSNotification *)aNotification;
 - (void)notifyWithRepositoriesRemovals:(NSNotification *)aNotification;
 - (void)notifyWithNewPush:(NSNotification *)aNotification;
+- (void)notifyWithWatchersAdded:(NSNotification *)aNotification;
 @end
 
 @implementation GrowlManager 
@@ -35,6 +36,11 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self 
                                              selector:@selector(notifyWithNewPush:)
                                                  name:GITHUB_NOTIFICATION_COMMITS_PUSHED
+                                               object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(notifyWithWatchersAdded:)
+                                                 name:GITHUB_NOTIFICATION_WATCHERS_ADDED
                                                object:nil];
 	
 	
@@ -118,6 +124,9 @@
 					  ([[clickContext objectForKey:@"author"] isNotEqualTo:nil]) ? [clickContext objectForKey:@"author"] : githubUser.username,
 					  [clickContext objectForKey:@"repoName"]];
 			break;
+		case GithubTimelineObjectWatchersAdded:
+			urlEnd = [NSString stringWithFormat:@"%@", [clickContext objectForKey:@"name"]];
+			break;
 		default:
 			urlEnd = [NSString stringWithFormat:@"%@", [clickContext objectForKey:@"username"]];
 			
@@ -127,4 +136,50 @@
 	[ws openURL: url];
 	
 }
+
+
+
+- (void)notifyWithWatchersAdded:(NSNotification *)aNotification
+{
+	NSDictionary *userInfo = [aNotification userInfo];
+	NSMutableArray *watchers = [userInfo objectForKey:@"additions"];
+	
+	[GrowlApplicationBridge setGrowlDelegate:self];
+
+	if (3 < [watchers count]) {
+		NSString *title = [NSString stringWithFormat:@"New watchers for %@/%@", 
+						   [userInfo valueForKey:@"user"], 
+						   [userInfo valueForKey:@"repo"]];
+		NSMutableString *message = [NSMutableString stringWithFormat:@"%d new watchers\n", [watchers count]];
+		[watchers enumerateObjectsUsingBlock:^(id obj, NSUInteger index, BOOL *stop) {
+			[message appendFormat:@"%@\n", [obj valueForKey:@"name"]];
+		}];
+		
+		[GrowlApplicationBridge notifyWithTitle:title
+									description:message
+							   notificationName:GITHUB_NOTIFICATION_WATCHERS_ADDED
+									   iconData:nil
+									   priority:0
+									   isSticky:NO
+								   clickContext:nil];
+	} else {
+		[watchers enumerateObjectsUsingBlock:^(id obj, NSUInteger index, BOOL *stop) {		
+			NSMutableDictionary *context = [NSMutableDictionary dictionary];
+			[context setValue:[obj objectForKey:@"name"] forKey:@"name"];
+			[context setValue:[NSNumber numberWithInteger:GithubTimelineObjectWatchersAdded] forKey:@"type"];	
+			NSString *title = [NSString stringWithFormat:@"New watchers for %@", 
+							   [userInfo valueForKey:@"repo"]];
+			[GrowlApplicationBridge notifyWithTitle:title
+										description:[NSString stringWithFormat:@"%@ is now watching your fork", [obj valueForKey:@"name"]]
+								   notificationName:GITHUB_NOTIFICATION_WATCHERS_ADDED
+										   iconData:nil
+										   priority:0
+										   isSticky:NO
+									   clickContext:context];
+		}];
+	}
+	
+	
+}
+
 @end

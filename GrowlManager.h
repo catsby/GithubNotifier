@@ -11,9 +11,10 @@
 @class AppController;
 @class GithubUser;
 
-#define GITHUB_NOTIFICATION_REPOSITORIES_ADDED   @"Repository added"
-#define GITHUB_NOTIFICATION_REPOSITORIES_REMOVED @"Repository removed"
+#define GITHUB_NOTIFICATION_REPOSITORIES_ADDED   @"Repository Added"
+#define GITHUB_NOTIFICATION_REPOSITORIES_REMOVED @"Repository Removed"
 #define GITHUB_NOTIFICATION_COMMITS_PUSHED @"New Push"
+#define GITHUB_NOTIFICATION_WATCHERS_ADDED @"New Watchers Added"
 
 typedef enum _GithubTimelineObjectType {
 	GithubTimelineObjectRepoAdded,
@@ -27,7 +28,9 @@ typedef enum _GithubTimelineObjectType {
     GithubTimelineObjectIssueAdded,
     GithubTimelineObjectIssueClosed,
 	
-	GithubTimelineObjectNewPush
+	GithubTimelineObjectNewPush,
+	GithubTimelineObjectWatchersAdded
+	
     
 } GithubTimelineObjectType;
 
