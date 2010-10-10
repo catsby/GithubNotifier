@@ -124,6 +124,9 @@
 					  ([[clickContext objectForKey:@"author"] isNotEqualTo:nil]) ? [clickContext objectForKey:@"author"] : githubUser.username,
 					  [clickContext objectForKey:@"repoName"]];
 			break;
+		case GithubTimelineObjectWatchersAdded:
+			urlEnd = [NSString stringWithFormat:@"%@", [clickContext objectForKey:@"name"]];
+			break;
 		default:
 			urlEnd = [NSString stringWithFormat:@"%@", [clickContext objectForKey:@"username"]];
 			
@@ -147,9 +150,10 @@
 		NSString *title = [NSString stringWithFormat:@"New watchers for %@/%@", 
 						   [userInfo valueForKey:@"user"], 
 						   [userInfo valueForKey:@"repo"]];
-		NSMutableString *message = [NSString stringWithFormat:@"%d new watchers\n%@", 
-									[watchers count],
-									[watchers componentsJoinedByString:@"\n"]];
+		NSMutableString *message = [NSMutableString stringWithFormat:@"%d new watchers\n", [watchers count]];
+		[watchers enumerateObjectsUsingBlock:^(id obj, NSUInteger index, BOOL *stop) {
+			[message appendFormat:@"%@\n", [obj valueForKey:@"name"]];
+		}];
 		
 		[GrowlApplicationBridge notifyWithTitle:title
 									description:message
@@ -159,7 +163,10 @@
 									   isSticky:NO
 								   clickContext:nil];
 	} else {
-		[watchers enumerateObjectsUsingBlock:^(id obj, NSUInteger index, BOOL *stop) {			
+		[watchers enumerateObjectsUsingBlock:^(id obj, NSUInteger index, BOOL *stop) {		
+			NSMutableDictionary *context = [NSMutableDictionary dictionary];
+			[context setValue:[obj objectForKey:@"name"] forKey:@"name"];
+			[context setValue:[NSNumber numberWithInteger:GithubTimelineObjectWatchersAdded] forKey:@"type"];	
 			NSString *title = [NSString stringWithFormat:@"New watchers for %@", 
 							   [userInfo valueForKey:@"repo"]];
 			[GrowlApplicationBridge notifyWithTitle:title
@@ -168,7 +175,7 @@
 										   iconData:nil
 										   priority:0
 										   isSticky:NO
-									   clickContext:nil];
+									   clickContext:context];
 		}];
 	}
 	
