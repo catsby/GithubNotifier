@@ -23,7 +23,7 @@
 	self.parentRepository.watcherList = [mergedWatchers objectForKey:@"watcherList"];
 	NSArray *additions = [mergedWatchers objectForKey:@"additions"];
 	
-	if (1 < [additions count]) {
+	if (0 < [additions count]) {
 		[mergedWatchers setObject:task.user forKey:@"user"];
 		[mergedWatchers setObject:task.repo forKey:@"repo"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:GITHUB_NOTIFICATION_WATCHERS_ADDED 

@@ -144,32 +144,27 @@
 	[GrowlApplicationBridge setGrowlDelegate:self];
 
 	if (3 < [watchers count]) {
-		//NSDictionary *firstObject = [watchers objectAtIndex:0];
-		//NSString *linkTitle = [NSString stringWithFormat:@"%@/", [commit objectForKey:@"login"]] : @"";
-		
 		NSString *title = [NSString stringWithFormat:@"New watchers for %@/%@", 
 						   [userInfo valueForKey:@"user"], 
 						   [userInfo valueForKey:@"repo"]];
-//		NSMutableDictionary *context = [NSMutableDictionary dictionary];
-//		[context setValue:[commit objectForKey:@"login"] forKey:@"author"];
-//		[context setValue:[repository valueForKey:@"name"] forKey:@"repoName"];
-//		[context setValue:[commit objectForKey:@"id"] forKey:@"commitId"];
-//		[context setValue:[NSNumber numberWithInteger:GithubTimelineObjectNewPush] forKey:@"type"];
+		NSMutableString *message = [NSString stringWithFormat:@"%d new watchers\n%@", 
+									[watchers count],
+									[watchers componentsJoinedByString:@"\n"]];
+		
 		[GrowlApplicationBridge notifyWithTitle:title
-									description:[NSString stringWithFormat:@"%d watchers were added", [watchers count]]
-							   notificationName:GITHUB_NOTIFICATION_COMMITS_PUSHED
+									description:message
+							   notificationName:GITHUB_NOTIFICATION_WATCHERS_ADDED
 									   iconData:nil
 									   priority:0
 									   isSticky:NO
 								   clickContext:nil];
 	} else {
 		[watchers enumerateObjectsUsingBlock:^(id obj, NSUInteger index, BOOL *stop) {			
-			NSString *title = [NSString stringWithFormat:@"New watchers for %@/%@", 
-							   [userInfo valueForKey:@"user"], 
+			NSString *title = [NSString stringWithFormat:@"New watchers for %@", 
 							   [userInfo valueForKey:@"repo"]];
 			[GrowlApplicationBridge notifyWithTitle:title
 										description:[NSString stringWithFormat:@"%@ is now watching your fork", [obj valueForKey:@"name"]]
-								   notificationName:GITHUB_NOTIFICATION_COMMITS_PUSHED
+								   notificationName:GITHUB_NOTIFICATION_WATCHERS_ADDED
 										   iconData:nil
 										   priority:0
 										   isSticky:NO
