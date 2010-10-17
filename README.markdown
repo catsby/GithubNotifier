@@ -4,6 +4,10 @@ GithubNotifier is a menu-bar app that checks your Github account for network act
 
 #Downloads
 
+- **[1.1]**  [GithubNotifier-1.1.zip][8]
+
+- Receive notifications when someone starts watching any of your repositories.  
+
 - **[1.0]**  [GithubNotifier-1.0.zip][1]
 
 #Development
@@ -12,6 +16,12 @@ Patches / bugs welcome.
 To get setup for development, be sure to run 
 `git submodule init` && `git submodule update` to pull down the latest `CocoaREST` and `EMKeychain` files
 
+#Future
+
+- Sparkle integration
+- New notifications:
+ 	- New forks of your repositories 
+	- New issues added to your repositories
 
 #Credits:
 [Steven Degutis][2] for [CocoaREST][3]
@@ -28,3 +38,4 @@ To get setup for development, be sure to run
 [5]: http://extendmac.com/EMKeychain
 [6]: http://www.enormego.com
 [7]: http://github.com/enormego/cocoa-helpers
+[8]: http://github.com/downloads/ctshryock/GithubNotifier/GithubNotifier-1.1.zip
