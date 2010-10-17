@@ -7,16 +7,15 @@
 //
 
 #import "AppController.h"
-#import "GithubUser.h"
-#import "SDGithubTaskManager.h"
-#import "RepositoriesDelegate.h"
 #import "NetworkMetaDelegate.h"
 #import "NetworkDataDelegate.h"
+#import "RepositoriesController.h"
+#import "GithubUser.h"
+#import "SDGithubTaskManager.h"
 
 #import "GrowlManager.h"
 
 @interface AppController (Private)
-- (void)updateRepositories:(NSNotification *)aNotification;
 - (void)resetTimer:(NSNotification *)aNotification;
 - (NSTimeInterval)refreshRate;
 @end
@@ -25,10 +24,9 @@
 
 @synthesize growlManager;
 @synthesize repositoryArrayController;
-
-@synthesize mainTaskManager;
-@synthesize mainRepositoriesDelegate;
 @synthesize repeatingTimer;
+@synthesize repositoriesController;
+
 
 - (id) init
 {
@@ -42,13 +40,6 @@
 
 - (void) awakeFromNib
 {
-	self.mainTaskManager			= [SDGithubTaskManager new];
-	self.mainRepositoriesDelegate	= [RepositoriesDelegate new];
-	
-	self.mainTaskManager.delegate = mainRepositoriesDelegate;
-	self.mainTaskManager.successSelector = @selector(githubManager:resultsReadyForTask:);
-	self.mainTaskManager.failSelector = @selector(githubManager:failedForTask:);
-	
 	//	Listen for when repositories have been merged, then update 
     [[NSNotificationCenter defaultCenter] addObserver:self 
                                              selector:@selector(updateRepositories:)
@@ -84,14 +75,12 @@
 - (void)run:(NSTimer *)timer
 {
 	GithubUser *githubUser = [GithubUser sharedInstance];
-	if ([githubUser.username isNotEqualTo:nil]) {	
-		self.mainTaskManager.username = githubUser.username;
-		self.mainTaskManager.password = githubUser.apiToken;
-		SDGithubTask *basicTask = [SDGithubTask taskWithManager:self.mainTaskManager];
-		basicTask.user = self.mainTaskManager.username;
-		basicTask.name = self.mainTaskManager.username;
-		basicTask.type = SDGithubTaskGetRepos;
-		[basicTask run];
+
+	if ([githubUser.username isNotEqualTo:nil]) {		
+		if (!self.repositoriesController) {
+			self.repositoriesController = [[RepositoriesController alloc] initWithGithubUser:githubUser];
+		}
+		[self.repositoriesController fetchUpdates];
 	}
 }
 

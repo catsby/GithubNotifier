@@ -33,7 +33,7 @@
 
 - (void) githubManager:(SDGithubTaskManager*)manager failedForTask:(SDGithubTask*)task 
 {	
-	
+	NSLog(@"error in NetworkMetaDelegate>githubManager:");
 }
 
 

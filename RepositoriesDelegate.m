@@ -9,6 +9,7 @@
 #import "RepositoriesDelegate.h"
 #import "SDGithubTaskManager.h"
 #import "SDGithubTask.h"
+#import "CSManagedRepository.h"
 
 #import "GrowlManager.h"
 
@@ -19,7 +20,8 @@
 - (NSMutableArray *)repositoriesForResults:(NSArray *)remoteResults;
 - (NSFetchRequest *)repositoryFetchRequestWithManangedObjectContext:(NSManagedObjectContext *)moc;
 - (NSManagedObject *)createRepositoryForData:(NSDictionary *)data;
-- (NSManagedObject *)fetchRepositoryObjectByName:(NSString *)name;
+- (CSManagedRepository *)fetchRepositoryObjectByName:(NSString *)name;
+- (CSManagedRepository *)updateRepository:(CSManagedRepository *)repository withDictionary:(NSDictionary *)data;
 
 @end
 
@@ -38,6 +40,7 @@
 
 
 - (void) githubManager:(SDGithubTaskManager*)manager resultsReadyForTask:(SDGithubTask*)task {
+	
 	self.results = [task.results valueForKey:@"repositories"];
 
 	NSArray *localRepositories = [self fetchRepositories];
@@ -102,21 +105,38 @@
 {
     NSMutableArray *repositories = [NSMutableArray arrayWithCapacity:0];
     for (NSDictionary *dict in remoteResults) {
-        NSManagedObject *repo = [self fetchRepositoryObjectByName:[dict valueForKey:@"name"]];
+        CSManagedRepository *repo = [self fetchRepositoryObjectByName:[dict valueForKey:@"name"]];
         if (repo) {
-            [repositories addObject:repo];
+            [repositories addObject:[self updateRepository:repo withDictionary:dict]];
         } else {
             [repositories addObject:[self createRepositoryForData:dict]];
         }
     }
-    
     return repositories;
+}
+
+- (CSManagedRepository *)updateRepository:(CSManagedRepository *)repository withDictionary:(NSDictionary *)data
+{
+	[repository setValue:[data valueForKey:@"name"] forKey:@"name"];
+    [repository setValue:[data valueForKey:@"description"] forKey:@"desc"];
+    [repository setValue:[data valueForKey:@"owner"] forKey:@"owner"];
+    [repository setValue:[data valueForKey:@"url"] forKey:@"url"];
+    [repository setValue:[data valueForKey:@"parent"] forKey:@"parent"];
+    [repository setValue:[data valueForKey:@"source"] forKey:@"source"];
+    [repository setValue:[data valueForKey:@"forks"] forKey:@"forks"];
+	repository.watcherCount = [data valueForKey:@"watchers"];
+//	repository.watcherCount = [NSNumber numberWithInt:1];
+//	repository.watcherList = nil;
+    [repository setValue:[data valueForKey:@"homepage"] forKey:@"homepage"];    
+	NSNumber *isFork = [NSNumber numberWithUnsignedInt:[[data valueForKey:@"fork"] intValue]];
+    [repository setValue:isFork forKey:@"isFork"];
+    return repository;
 }
 
 - (NSManagedObject *)createRepositoryForData:(NSDictionary *)data
 {
     NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
-    NSManagedObject *newRepo = [NSEntityDescription insertNewObjectForEntityForName:@"Repository" 
+    CSManagedRepository *newRepo = [NSEntityDescription insertNewObjectForEntityForName:@"Repository" 
                                                              inManagedObjectContext:moc];
     [newRepo setValue:[data valueForKey:@"name"] forKey:@"name"];
     [newRepo setValue:[data valueForKey:@"description"] forKey:@"desc"];
@@ -125,7 +145,7 @@
     [newRepo setValue:[data valueForKey:@"parent"] forKey:@"parent"];
     [newRepo setValue:[data valueForKey:@"source"] forKey:@"source"];
     [newRepo setValue:[data valueForKey:@"forks"] forKey:@"forks"];
-    [newRepo setValue:[data valueForKey:@"watchers"] forKey:@"watchers"];    
+	newRepo.watcherCount = [data valueForKey:@"watchers"];    
     [newRepo setValue:[data valueForKey:@"homepage"] forKey:@"homepage"];    
 	NSNumber *isFork = [NSNumber numberWithUnsignedInt:[[data valueForKey:@"fork"] intValue]];
     [newRepo setValue:isFork forKey:@"isFork"];
@@ -152,7 +172,7 @@
     return resultArray;
 }
 
-- (NSManagedObject *)fetchRepositoryObjectByName:(NSString *)name
+- (CSManagedRepository *)fetchRepositoryObjectByName:(NSString *)name
 {
     NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
     NSFetchRequest *request = [self repositoryFetchRequestWithManangedObjectContext:moc];
