@@ -5,8 +5,7 @@ GithubNotifier is a menu-bar app that checks your Github account for network act
 #Downloads
 
 - **[1.1]**  [GithubNotifier-1.1.zip][8]
-
-- Receive notifications when someone starts watching any of your repositories.  
+	- Receive notifications when someone starts watching any of your repositories.  
 
 - **[1.0]**  [GithubNotifier-1.0.zip][1]
 
