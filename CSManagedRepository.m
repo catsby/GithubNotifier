@@ -61,8 +61,8 @@
 
 - (void)setWatcherCount:(NSNumber *)value 
 {
-	if (![value isEqualToNumber:[self primitiveWatcherCount]]) {
-		NSLog(@"watcher count has changed on an original repo");
+	NSNumber *watcherCount = ([self primitiveWatcherCount]) ? [self primitiveWatcherCount] : [NSNumber numberWithInt:0];
+	if (![value isEqualToNumber:watcherCount]) {
 		GithubUser *githubUser = [GithubUser sharedInstance];
 		SDGithubTaskManager *watcherManager = [[SDGithubTaskManager manager] retain];
         RepositoryWatchersDelegate *watcherDelegate = [[RepositoryWatchersDelegate alloc] init];
@@ -110,5 +110,6 @@
     [self setPrimitiveWatcherList:value];
     [self didChangeValueForKey:@"watcherList"];
 }
+
 
 @end

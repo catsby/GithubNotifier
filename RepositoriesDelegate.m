@@ -40,6 +40,7 @@
 
 
 - (void) githubManager:(SDGithubTaskManager*)manager resultsReadyForTask:(SDGithubTask*)task {
+	
 	self.results = [task.results valueForKey:@"repositories"];
 
 	NSArray *localRepositories = [self fetchRepositories];
@@ -111,7 +112,6 @@
             [repositories addObject:[self createRepositoryForData:dict]];
         }
     }
-    
     return repositories;
 }
 
@@ -136,7 +136,7 @@
 - (NSManagedObject *)createRepositoryForData:(NSDictionary *)data
 {
     NSManagedObjectContext *moc = [[NSApp delegate] managedObjectContext];
-    NSManagedObject *newRepo = [NSEntityDescription insertNewObjectForEntityForName:@"Repository" 
+    CSManagedRepository *newRepo = [NSEntityDescription insertNewObjectForEntityForName:@"Repository" 
                                                              inManagedObjectContext:moc];
     [newRepo setValue:[data valueForKey:@"name"] forKey:@"name"];
     [newRepo setValue:[data valueForKey:@"description"] forKey:@"desc"];
@@ -145,7 +145,7 @@
     [newRepo setValue:[data valueForKey:@"parent"] forKey:@"parent"];
     [newRepo setValue:[data valueForKey:@"source"] forKey:@"source"];
     [newRepo setValue:[data valueForKey:@"forks"] forKey:@"forks"];
-    [newRepo setValue:[data valueForKey:@"watchers"] forKey:@"watchers"];    
+	newRepo.watcherCount = [data valueForKey:@"watchers"];    
     [newRepo setValue:[data valueForKey:@"homepage"] forKey:@"homepage"];    
 	NSNumber *isFork = [NSNumber numberWithUnsignedInt:[[data valueForKey:@"fork"] intValue]];
     [newRepo setValue:isFork forKey:@"isFork"];
