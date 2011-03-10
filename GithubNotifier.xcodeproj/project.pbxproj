@@ -40,13 +40,17 @@
 		F43BF9AF11E4B06C003346C7 /* RepositoriesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF9A911E4B06C003346C7 /* RepositoriesDelegate.m */; };
 		F43BF9BC11E4B10F003346C7 /* EMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF9BB11E4B10F003346C7 /* EMKeychain.m */; };
 		F43BF9C011E4B135003346C7 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43BF9BF11E4B135003346C7 /* Growl.framework */; };
-		F43BF9CB11E4B14A003346C7 /* Growl.framework in Copy Frameworks (2) */ = {isa = PBXBuildFile; fileRef = F43BF9BF11E4B135003346C7 /* Growl.framework */; };
+		F43BF9CB11E4B14A003346C7 /* Growl.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F43BF9BF11E4B135003346C7 /* Growl.framework */; };
 		F43BF9CD11E4B157003346C7 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */; };
-		F43BF9FF11E4B15B003346C7 /* BWToolkitFramework.framework in Copy Frameworks (2) */ = {isa = PBXBuildFile; fileRef = F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */; };
+		F43BF9FF11E4B15B003346C7 /* BWToolkitFramework.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */; };
 		F43BFA0511E4B1A7003346C7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43BFA0411E4B1A7003346C7 /* Security.framework */; };
 		F43BFAB611E4B26C003346C7 /* AccountSetup.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43BFAB511E4B26C003346C7 /* AccountSetup.xib */; };
+		F45A308012917B0B008725FB /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45A307F12917B0B008725FB /* Sparkle.framework */; };
+		F45A308912917B1B008725FB /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F45A307F12917B0B008725FB /* Sparkle.framework */; };
 		F464546D1254BDC100D17734 /* RepositoriesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F464546C1254BDC100D17734 /* RepositoriesController.m */; };
 		F4A9426E125CA537001B8D57 /* 1-3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F4A9426D125CA537001B8D57 /* 1-3.xcmappingmodel */; };
+		F4D7796B1328666B00A11773 /* githubnotifier.icns in Resources */ = {isa = PBXBuildFile; fileRef = F4D7796A1328666B00A11773 /* githubnotifier.icns */; };
+		F4D779B213286BCA00A11773 /* githubnotifier_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = F4D779B113286BCA00A11773 /* githubnotifier_inactive.png */; };
 		F4E0869311F0CA9300555607 /* NSWorkspaceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E0869211F0CA9300555607 /* NSWorkspaceHelper.m */; };
 		F4EAE8E4125B4FF400300F65 /* ObjectDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EAE8E3125B4FF400300F65 /* ObjectDelegate.m */; };
 		F4EAE8E7125B4FFC00300F65 /* CollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EAE8E6125B4FFC00300F65 /* CollectionDelegate.m */; };
@@ -55,16 +59,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F43BF9D011E4B157003346C7 /* Copy Frameworks (2) */ = {
+		F43BF9D011E4B157003346C7 /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F43BF9FF11E4B15B003346C7 /* BWToolkitFramework.framework in Copy Frameworks (2) */,
-				F43BF9CB11E4B14A003346C7 /* Growl.framework in Copy Frameworks (2) */,
+				F45A308912917B1B008725FB /* Sparkle.framework in Copy Frameworks */,
+				F43BF9FF11E4B15B003346C7 /* BWToolkitFramework.framework in Copy Frameworks */,
+				F43BF9CB11E4B14A003346C7 /* Growl.framework in Copy Frameworks */,
 			);
-			name = "Copy Frameworks (2)";
+			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -140,9 +145,12 @@
 		F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = ThirdPartyFrameworks/BWToolkitFramework.framework; sourceTree = DEVELOPER_DIR; };
 		F43BFA0411E4B1A7003346C7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F43BFAB511E4B26C003346C7 /* AccountSetup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AccountSetup.xib; path = Interface/AccountSetup.xib; sourceTree = "<group>"; };
+		F45A307F12917B0B008725FB /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		F464546B1254BDC100D17734 /* RepositoriesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepositoriesController.h; path = Classes/RepositoriesController.h; sourceTree = "<group>"; };
 		F464546C1254BDC100D17734 /* RepositoriesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepositoriesController.m; path = Classes/RepositoriesController.m; sourceTree = "<group>"; };
 		F4A9426D125CA537001B8D57 /* 1-3.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = "1-3.xcmappingmodel"; sourceTree = "<group>"; };
+		F4D7796A1328666B00A11773 /* githubnotifier.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = githubnotifier.icns; sourceTree = "<group>"; };
+		F4D779B113286BCA00A11773 /* githubnotifier_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = githubnotifier_inactive.png; sourceTree = "<group>"; };
 		F4E0869111F0CA9300555607 /* NSWorkspaceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSWorkspaceHelper.h; path = Classes/NSWorkspaceHelper.h; sourceTree = "<group>"; };
 		F4E0869211F0CA9300555607 /* NSWorkspaceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSWorkspaceHelper.m; path = Classes/NSWorkspaceHelper.m; sourceTree = "<group>"; };
 		F4EAE8C6125B4E2800300F65 /* GithubNotifier_DataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GithubNotifier_DataModel 3.xcdatamodel"; sourceTree = "<group>"; };
@@ -164,6 +172,7 @@
 				F43BF9C011E4B135003346C7 /* Growl.framework in Frameworks */,
 				F43BF9CD11E4B157003346C7 /* BWToolkitFramework.framework in Frameworks */,
 				F43BFA0511E4B1A7003346C7 /* Security.framework in Frameworks */,
+				F45A308012917B0B008725FB /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +193,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F45A307F12917B0B008725FB /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				F43BF9BF11E4B135003346C7 /* Growl.framework */,
 				F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */,
@@ -238,6 +248,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F4D779B113286BCA00A11773 /* githubnotifier_inactive.png */,
+				F4D7796A1328666B00A11773 /* githubnotifier.icns */,
 				F4F6974711FC95AA006FDF65 /* Credits.html */,
 				F43BFAB511E4B26C003346C7 /* AccountSetup.xib */,
 				F43BF9A111E4B06C003346C7 /* Growl Registration Ticket.growlRegDict */,
@@ -388,7 +400,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				F43BF9D011E4B157003346C7 /* Copy Frameworks (2) */,
+				F43BF9D011E4B157003346C7 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -438,6 +450,8 @@
 				F43BFAB611E4B26C003346C7 /* AccountSetup.xib in Resources */,
 				F40921C811E96048001550DC /* Preferences.xib in Resources */,
 				F4F6974811FC95AA006FDF65 /* Credits.html in Resources */,
+				F4D7796B1328666B00A11773 /* githubnotifier.icns in Resources */,
+				F4D779B213286BCA00A11773 /* githubnotifier_inactive.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +530,7 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/ThirdPartyFrameworks\"",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Versions/A/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -541,6 +556,7 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/ThirdPartyFrameworks\"",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Versions/A/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
