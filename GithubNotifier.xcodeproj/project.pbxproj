@@ -45,8 +45,6 @@
 		F43BF9FF11E4B15B003346C7 /* BWToolkitFramework.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */; };
 		F43BFA0511E4B1A7003346C7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43BFA0411E4B1A7003346C7 /* Security.framework */; };
 		F43BFAB611E4B26C003346C7 /* AccountSetup.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43BFAB511E4B26C003346C7 /* AccountSetup.xib */; };
-		F45A308012917B0B008725FB /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45A307F12917B0B008725FB /* Sparkle.framework */; };
-		F45A308912917B1B008725FB /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F45A307F12917B0B008725FB /* Sparkle.framework */; };
 		F464546D1254BDC100D17734 /* RepositoriesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F464546C1254BDC100D17734 /* RepositoriesController.m */; };
 		F4A9426E125CA537001B8D57 /* 1-3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F4A9426D125CA537001B8D57 /* 1-3.xcmappingmodel */; };
 		F4D7796B1328666B00A11773 /* githubnotifier.icns in Resources */ = {isa = PBXBuildFile; fileRef = F4D7796A1328666B00A11773 /* githubnotifier.icns */; };
@@ -65,7 +63,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F45A308912917B1B008725FB /* Sparkle.framework in Copy Frameworks */,
 				F43BF9FF11E4B15B003346C7 /* BWToolkitFramework.framework in Copy Frameworks */,
 				F43BF9CB11E4B14A003346C7 /* Growl.framework in Copy Frameworks */,
 			);
@@ -145,7 +142,6 @@
 		F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = ThirdPartyFrameworks/BWToolkitFramework.framework; sourceTree = DEVELOPER_DIR; };
 		F43BFA0411E4B1A7003346C7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F43BFAB511E4B26C003346C7 /* AccountSetup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AccountSetup.xib; path = Interface/AccountSetup.xib; sourceTree = "<group>"; };
-		F45A307F12917B0B008725FB /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		F464546B1254BDC100D17734 /* RepositoriesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepositoriesController.h; path = Classes/RepositoriesController.h; sourceTree = "<group>"; };
 		F464546C1254BDC100D17734 /* RepositoriesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepositoriesController.m; path = Classes/RepositoriesController.m; sourceTree = "<group>"; };
 		F4A9426D125CA537001B8D57 /* 1-3.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = "1-3.xcmappingmodel"; sourceTree = "<group>"; };
@@ -172,7 +168,6 @@
 				F43BF9C011E4B135003346C7 /* Growl.framework in Frameworks */,
 				F43BF9CD11E4B157003346C7 /* BWToolkitFramework.framework in Frameworks */,
 				F43BFA0511E4B1A7003346C7 /* Security.framework in Frameworks */,
-				F45A308012917B0B008725FB /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +188,6 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F45A307F12917B0B008725FB /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				F43BF9BF11E4B135003346C7 /* Growl.framework */,
 				F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */,
