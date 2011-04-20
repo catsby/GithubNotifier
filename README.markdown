@@ -15,6 +15,14 @@ Patches / bugs welcome.
 To get setup for development, be sure to run 
 `git submodule init` && `git submodule update` to pull down the latest `CocoaREST` and `EMKeychain` files
 
+#Building
+
+Releases are done by myself, so "release" configuration requires my
+private key for code-signing.  If you'd like to compile and run your own
+release build go to project settings and under "release"
+configuration, remove `scary-robot-development` and either leave blank
+or use your own key
+
 #Future
 
 - Sparkle integration
