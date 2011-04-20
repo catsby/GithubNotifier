@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @class GithubUser;
+@class PreferencesWindowController;
 
 @interface GithubNotifier_AppDelegate : NSObject <NSApplicationDelegate> 
 {
@@ -21,6 +22,8 @@
 	IBOutlet NSMenu			*appMenu;
 	
 	IBOutlet NSArrayController *repositoryArrayController;
+	
+	PreferencesWindowController *preferencesWindowController;
 }
 
 
@@ -31,6 +34,8 @@
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 
 @property (nonatomic, retain) IBOutlet NSMenu *appMenu;
+
+@property (nonatomic, retain) PreferencesWindowController *preferencesWindowController;
 
 - (IBAction)saveAction:sender;
 - (IBAction)quitMenuAction:(id)sender;

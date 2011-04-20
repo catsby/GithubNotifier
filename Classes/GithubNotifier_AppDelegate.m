@@ -13,7 +13,7 @@
 @implementation GithubNotifier_AppDelegate
 
 @synthesize appMenu;
-@synthesize repositoryArrayController;
+@synthesize repositoryArrayController,preferencesWindowController;
 
 
 /**
@@ -264,7 +264,10 @@
 
 - (IBAction)showPreferences:(id)sender
 {
-	PreferencesWindowController *preferencesWindowController = [[PreferencesWindowController alloc] initWithWindowNibName:@"Preferences"];
-	[preferencesWindowController showWindow:nil];
+	self.preferencesWindowController = [[PreferencesWindowController alloc] initWithWindowNibName:@"Preferences"];
+
+	[NSApp activateIgnoringOtherApps: YES];
+	[[self.preferencesWindowController window] makeKeyWindow];
+	
 }
 @end
