@@ -42,7 +42,7 @@ static GithubUser *sharedInstance = nil;
 	EMGenericKeychainItem *keychainItem = [EMGenericKeychainItem genericKeychainItemForService:@"com.scary-robot.GithubNotifier"
 																				  withUsername:self.username];
 	if(!keychainItem) {
-		keychainItem = [EMGenericKeychainItem addGenericKeychainItemForService:@"com.scary-robot.GithubNotifier" 
+		[EMGenericKeychainItem addGenericKeychainItemForService:@"com.scary-robot.GithubNotifier" 
 												   withUsername:self.username 
 													   password:aToken];
 	} else {
