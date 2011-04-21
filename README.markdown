@@ -2,12 +2,16 @@
 
 GithubNotifier is a menu-bar app for Mac OS 10.6+ that polls Github for network activity on any of your repositories.  
 
-#Downloads
+#Release History
 
-- **[1.1]**  [GithubNotifier-1.1.zip][8]
+- **[1.2]** [GithubNotifier-1.2.zip][8]
+  - Better notifications
+  - Updates on watcher count
+
+- **[1.1]**  GithubNotifier-1.1.zip
 	- Receive notifications when someone starts watching any of your repositories.  
 
-- **[1.0]**  [GithubNotifier-1.0.zip][1]
+- **[1.0]**  GithubNotifier-1.0.zip
 
 #Development
 
@@ -38,11 +42,10 @@ or use your own key
 [Shaun Harrison and or Enormego][6] for [NSWorkspaceHelper][7]
 
 
-[1]: http://github.com/downloads/ctshryock/GithubNotifier/GithubNotifier-1.0.zip
 [2]: http://degutis.org/
 [3]: http://github.com/sdegutis/CocoaREST
 [4]: http://extendmac.com
 [5]: http://extendmac.com/EMKeychain
 [6]: http://www.enormego.com
 [7]: http://github.com/enormego/cocoa-helpers
-[8]: http://github.com/downloads/ctshryock/GithubNotifier/GithubNotifier-1.1.zip
+[8]: https://github.com/downloads/ctshryock/GithubNotifier/GithubNotifier-1.2.zip
