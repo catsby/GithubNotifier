@@ -1,6 +1,6 @@
 #GithubNotifier
 
-GithubNotifier is a menu-bar app that checks your Github account for network activity on any of your repositories.  
+GithubNotifier is a menu-bar app for Mac OS 10.6+ that polls Github for network activity on any of your repositories.  
 
 #Downloads
 
@@ -15,9 +15,17 @@ Patches / bugs welcome.
 To get setup for development, be sure to run 
 `git submodule init` && `git submodule update` to pull down the latest `CocoaREST` and `EMKeychain` files
 
+#Building
+
+Releases are done by myself, so "release" configuration requires my
+private key for code-signing.  If you'd like to compile and run your own
+release build go to project settings and under "release"
+configuration, remove `scary-robot-development` and either leave blank
+or use your own key
+
 #Future
 
-- Sparkle integration
+- Sparkle integration (or Mac App store... debating)
 - New notifications:
  	- New forks of your repositories 
 	- New issues added to your repositories

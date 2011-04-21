@@ -40,13 +40,15 @@
 		F43BF9AF11E4B06C003346C7 /* RepositoriesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF9A911E4B06C003346C7 /* RepositoriesDelegate.m */; };
 		F43BF9BC11E4B10F003346C7 /* EMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F43BF9BB11E4B10F003346C7 /* EMKeychain.m */; };
 		F43BF9C011E4B135003346C7 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43BF9BF11E4B135003346C7 /* Growl.framework */; };
-		F43BF9CB11E4B14A003346C7 /* Growl.framework in Copy Frameworks (2) */ = {isa = PBXBuildFile; fileRef = F43BF9BF11E4B135003346C7 /* Growl.framework */; };
+		F43BF9CB11E4B14A003346C7 /* Growl.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F43BF9BF11E4B135003346C7 /* Growl.framework */; };
 		F43BF9CD11E4B157003346C7 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */; };
-		F43BF9FF11E4B15B003346C7 /* BWToolkitFramework.framework in Copy Frameworks (2) */ = {isa = PBXBuildFile; fileRef = F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */; };
+		F43BF9FF11E4B15B003346C7 /* BWToolkitFramework.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */; };
 		F43BFA0511E4B1A7003346C7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43BFA0411E4B1A7003346C7 /* Security.framework */; };
 		F43BFAB611E4B26C003346C7 /* AccountSetup.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43BFAB511E4B26C003346C7 /* AccountSetup.xib */; };
 		F464546D1254BDC100D17734 /* RepositoriesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F464546C1254BDC100D17734 /* RepositoriesController.m */; };
 		F4A9426E125CA537001B8D57 /* 1-3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F4A9426D125CA537001B8D57 /* 1-3.xcmappingmodel */; };
+		F4D7796B1328666B00A11773 /* githubnotifier.icns in Resources */ = {isa = PBXBuildFile; fileRef = F4D7796A1328666B00A11773 /* githubnotifier.icns */; };
+		F4D779B213286BCA00A11773 /* githubnotifier_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = F4D779B113286BCA00A11773 /* githubnotifier_inactive.png */; };
 		F4E0869311F0CA9300555607 /* NSWorkspaceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E0869211F0CA9300555607 /* NSWorkspaceHelper.m */; };
 		F4EAE8E4125B4FF400300F65 /* ObjectDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EAE8E3125B4FF400300F65 /* ObjectDelegate.m */; };
 		F4EAE8E7125B4FFC00300F65 /* CollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EAE8E6125B4FFC00300F65 /* CollectionDelegate.m */; };
@@ -55,16 +57,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F43BF9D011E4B157003346C7 /* Copy Frameworks (2) */ = {
+		F43BF9D011E4B157003346C7 /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F43BF9FF11E4B15B003346C7 /* BWToolkitFramework.framework in Copy Frameworks (2) */,
-				F43BF9CB11E4B14A003346C7 /* Growl.framework in Copy Frameworks (2) */,
+				F43BF9FF11E4B15B003346C7 /* BWToolkitFramework.framework in Copy Frameworks */,
+				F43BF9CB11E4B14A003346C7 /* Growl.framework in Copy Frameworks */,
 			);
-			name = "Copy Frameworks (2)";
+			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -78,12 +80,12 @@
 		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* GithubNotifier_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubNotifier_Prefix.pch; sourceTree = "<group>"; };
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		77C8280B06725ACE000B614F /* GithubNotifier_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubNotifier_AppDelegate.h; sourceTree = "<group>"; };
-		77C8280C06725ACE000B614F /* GithubNotifier_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubNotifier_AppDelegate.m; sourceTree = "<group>"; };
+		77C8280B06725ACE000B614F /* GithubNotifier_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GithubNotifier_AppDelegate.h; path = Classes/GithubNotifier_AppDelegate.h; sourceTree = "<group>"; };
+		77C8280C06725ACE000B614F /* GithubNotifier_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GithubNotifier_AppDelegate.m; path = Classes/GithubNotifier_AppDelegate.m; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* GithubNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F403150A1259105800BE7410 /* CSManagedRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSManagedRepository.h; sourceTree = "<group>"; };
-		F403150B1259105800BE7410 /* CSManagedRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSManagedRepository.m; sourceTree = "<group>"; };
-		F40921C711E96048001550DC /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		F403150A1259105800BE7410 /* CSManagedRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSManagedRepository.h; path = Classes/CSManagedRepository.h; sourceTree = "<group>"; };
+		F403150B1259105800BE7410 /* CSManagedRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSManagedRepository.m; path = Classes/CSManagedRepository.m; sourceTree = "<group>"; };
+		F40921C711E96048001550DC /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Preferences.xib; path = Interface/Preferences.xib; sourceTree = "<group>"; };
 		F430F63611E36CA1000A7CFE /* NSColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+Hex.h"; path = "CocoaREST/Source/NSColor+Hex.h"; sourceTree = "<group>"; };
 		F430F63711E36CA1000A7CFE /* NSColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+Hex.m"; path = "CocoaREST/Source/NSColor+Hex.m"; sourceTree = "<group>"; };
 		F430F63811E36CA1000A7CFE /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "CocoaREST/Source/NSData+Base64.h"; sourceTree = "<group>"; };
@@ -118,40 +120,42 @@
 		F430F65511E36CA1000A7CFE /* YAJLDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YAJLDecoder.h; path = CocoaREST/Source/YAJLDecoder.h; sourceTree = "<group>"; };
 		F430F65611E36CA1000A7CFE /* YAJLDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YAJLDecoder.m; path = CocoaREST/Source/YAJLDecoder.m; sourceTree = "<group>"; };
 		F430F67511E36CEF000A7CFE /* GithubNotifier_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = GithubNotifier_DataModel.xcdatamodel; sourceTree = "<group>"; };
-		F43BF98C11E4AF81003346C7 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
-		F43BF98D11E4AF81003346C7 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
-		F43BF99311E4B00C003346C7 /* GithubUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubUser.h; sourceTree = "<group>"; };
-		F43BF99411E4B00C003346C7 /* GithubUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubUser.m; sourceTree = "<group>"; };
-		F43BF99A11E4B024003346C7 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
-		F43BF99B11E4B024003346C7 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		F43BF98C11E4AF81003346C7 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesWindowController.h; path = Classes/PreferencesWindowController.h; sourceTree = "<group>"; };
+		F43BF98D11E4AF81003346C7 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesWindowController.m; path = Classes/PreferencesWindowController.m; sourceTree = "<group>"; };
+		F43BF99311E4B00C003346C7 /* GithubUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GithubUser.h; path = Classes/GithubUser.h; sourceTree = "<group>"; };
+		F43BF99411E4B00C003346C7 /* GithubUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GithubUser.m; path = Classes/GithubUser.m; sourceTree = "<group>"; };
+		F43BF99A11E4B024003346C7 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = Classes/AppController.h; sourceTree = "<group>"; };
+		F43BF99B11E4B024003346C7 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppController.m; path = Classes/AppController.m; sourceTree = "<group>"; };
 		F43BF9A111E4B06C003346C7 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
-		F43BF9A211E4B06C003346C7 /* GrowlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlManager.h; sourceTree = "<group>"; };
-		F43BF9A311E4B06C003346C7 /* GrowlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlManager.m; sourceTree = "<group>"; };
-		F43BF9A411E4B06C003346C7 /* NetworkDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkDataDelegate.h; sourceTree = "<group>"; };
-		F43BF9A511E4B06C003346C7 /* NetworkDataDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkDataDelegate.m; sourceTree = "<group>"; };
-		F43BF9A611E4B06C003346C7 /* NetworkMetaDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkMetaDelegate.h; sourceTree = "<group>"; };
-		F43BF9A711E4B06C003346C7 /* NetworkMetaDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkMetaDelegate.m; sourceTree = "<group>"; };
-		F43BF9A811E4B06C003346C7 /* RepositoriesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoriesDelegate.h; sourceTree = "<group>"; };
-		F43BF9A911E4B06C003346C7 /* RepositoriesDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoriesDelegate.m; sourceTree = "<group>"; };
+		F43BF9A211E4B06C003346C7 /* GrowlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GrowlManager.h; path = Classes/GrowlManager.h; sourceTree = "<group>"; };
+		F43BF9A311E4B06C003346C7 /* GrowlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GrowlManager.m; path = Classes/GrowlManager.m; sourceTree = "<group>"; };
+		F43BF9A411E4B06C003346C7 /* NetworkDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkDataDelegate.h; path = Classes/NetworkDataDelegate.h; sourceTree = "<group>"; };
+		F43BF9A511E4B06C003346C7 /* NetworkDataDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkDataDelegate.m; path = Classes/NetworkDataDelegate.m; sourceTree = "<group>"; };
+		F43BF9A611E4B06C003346C7 /* NetworkMetaDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkMetaDelegate.h; path = Classes/NetworkMetaDelegate.h; sourceTree = "<group>"; };
+		F43BF9A711E4B06C003346C7 /* NetworkMetaDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkMetaDelegate.m; path = Classes/NetworkMetaDelegate.m; sourceTree = "<group>"; };
+		F43BF9A811E4B06C003346C7 /* RepositoriesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepositoriesDelegate.h; path = Classes/RepositoriesDelegate.h; sourceTree = "<group>"; };
+		F43BF9A911E4B06C003346C7 /* RepositoriesDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepositoriesDelegate.m; path = Classes/RepositoriesDelegate.m; sourceTree = "<group>"; };
 		F43BF9B011E4B086003346C7 /* GithubNotifier-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GithubNotifier-Info.plist"; sourceTree = "<group>"; };
 		F43BF9BA11E4B10F003346C7 /* EMKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMKeychain.h; path = EMKeychain/EMKeychain.h; sourceTree = "<group>"; };
 		F43BF9BB11E4B10F003346C7 /* EMKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMKeychain.m; path = EMKeychain/EMKeychain.m; sourceTree = "<group>"; };
 		F43BF9BF11E4B135003346C7 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = ThirdPartyFrameworks/Growl.framework; sourceTree = DEVELOPER_DIR; };
 		F43BF9CC11E4B157003346C7 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = ThirdPartyFrameworks/BWToolkitFramework.framework; sourceTree = DEVELOPER_DIR; };
 		F43BFA0411E4B1A7003346C7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F43BFAB511E4B26C003346C7 /* AccountSetup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSetup.xib; sourceTree = "<group>"; };
-		F464546B1254BDC100D17734 /* RepositoriesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoriesController.h; sourceTree = "<group>"; };
-		F464546C1254BDC100D17734 /* RepositoriesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoriesController.m; sourceTree = "<group>"; };
+		F43BFAB511E4B26C003346C7 /* AccountSetup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AccountSetup.xib; path = Interface/AccountSetup.xib; sourceTree = "<group>"; };
+		F464546B1254BDC100D17734 /* RepositoriesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepositoriesController.h; path = Classes/RepositoriesController.h; sourceTree = "<group>"; };
+		F464546C1254BDC100D17734 /* RepositoriesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepositoriesController.m; path = Classes/RepositoriesController.m; sourceTree = "<group>"; };
 		F4A9426D125CA537001B8D57 /* 1-3.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = "1-3.xcmappingmodel"; sourceTree = "<group>"; };
-		F4E0869111F0CA9300555607 /* NSWorkspaceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSWorkspaceHelper.h; sourceTree = "<group>"; };
-		F4E0869211F0CA9300555607 /* NSWorkspaceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSWorkspaceHelper.m; sourceTree = "<group>"; };
+		F4D7796A1328666B00A11773 /* githubnotifier.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = githubnotifier.icns; sourceTree = "<group>"; };
+		F4D779B113286BCA00A11773 /* githubnotifier_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = githubnotifier_inactive.png; sourceTree = "<group>"; };
+		F4E0869111F0CA9300555607 /* NSWorkspaceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSWorkspaceHelper.h; path = Classes/NSWorkspaceHelper.h; sourceTree = "<group>"; };
+		F4E0869211F0CA9300555607 /* NSWorkspaceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSWorkspaceHelper.m; path = Classes/NSWorkspaceHelper.m; sourceTree = "<group>"; };
 		F4EAE8C6125B4E2800300F65 /* GithubNotifier_DataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GithubNotifier_DataModel 3.xcdatamodel"; sourceTree = "<group>"; };
-		F4EAE8E2125B4FF400300F65 /* ObjectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectDelegate.h; sourceTree = "<group>"; };
-		F4EAE8E3125B4FF400300F65 /* ObjectDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectDelegate.m; sourceTree = "<group>"; };
-		F4EAE8E5125B4FFC00300F65 /* CollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionDelegate.h; sourceTree = "<group>"; };
-		F4EAE8E6125B4FFC00300F65 /* CollectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionDelegate.m; sourceTree = "<group>"; };
-		F4EAE91B125B51C600300F65 /* RepositoryWatchersDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryWatchersDelegate.h; sourceTree = "<group>"; };
-		F4EAE91C125B51C600300F65 /* RepositoryWatchersDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryWatchersDelegate.m; sourceTree = "<group>"; };
+		F4EAE8E2125B4FF400300F65 /* ObjectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectDelegate.h; path = Classes/ObjectDelegate.h; sourceTree = "<group>"; };
+		F4EAE8E3125B4FF400300F65 /* ObjectDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectDelegate.m; path = Classes/ObjectDelegate.m; sourceTree = "<group>"; };
+		F4EAE8E5125B4FFC00300F65 /* CollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionDelegate.h; path = Classes/CollectionDelegate.h; sourceTree = "<group>"; };
+		F4EAE8E6125B4FFC00300F65 /* CollectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionDelegate.m; path = Classes/CollectionDelegate.m; sourceTree = "<group>"; };
+		F4EAE91B125B51C600300F65 /* RepositoryWatchersDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepositoryWatchersDelegate.h; path = Classes/RepositoryWatchersDelegate.h; sourceTree = "<group>"; };
+		F4EAE91C125B51C600300F65 /* RepositoryWatchersDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepositoryWatchersDelegate.m; path = Classes/RepositoryWatchersDelegate.m; sourceTree = "<group>"; };
 		F4F6974711FC95AA006FDF65 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +242,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F4D779B113286BCA00A11773 /* githubnotifier_inactive.png */,
+				F4D7796A1328666B00A11773 /* githubnotifier.icns */,
 				F4F6974711FC95AA006FDF65 /* Credits.html */,
 				F43BFAB511E4B26C003346C7 /* AccountSetup.xib */,
 				F43BF9A111E4B06C003346C7 /* Growl Registration Ticket.growlRegDict */,
@@ -388,7 +394,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				F43BF9D011E4B157003346C7 /* Copy Frameworks (2) */,
+				F43BF9D011E4B157003346C7 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -438,6 +444,8 @@
 				F43BFAB611E4B26C003346C7 /* AccountSetup.xib in Resources */,
 				F40921C811E96048001550DC /* Preferences.xib in Resources */,
 				F4F6974811FC95AA006FDF65 /* Credits.html in Resources */,
+				F4D7796B1328666B00A11773 /* githubnotifier.icns in Resources */,
+				F4D779B213286BCA00A11773 /* githubnotifier_inactive.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +524,7 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/ThirdPartyFrameworks\"",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Versions/A/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -541,6 +550,7 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/ThirdPartyFrameworks\"",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Versions/A/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
@@ -558,7 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "scary-robot-development";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;

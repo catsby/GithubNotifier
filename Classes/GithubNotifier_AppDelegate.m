@@ -13,7 +13,7 @@
 @implementation GithubNotifier_AppDelegate
 
 @synthesize appMenu;
-@synthesize repositoryArrayController;
+@synthesize repositoryArrayController,preferencesWindowController;
 
 
 /**
@@ -158,7 +158,6 @@
     if (!managedObjectContext) return NSTerminateNow;
 
     if (![managedObjectContext commitEditing]) {
-        NSLog(@"%@:%s unable to commit editing to terminate", [self class], _cmd);
         return NSTerminateCancel;
     }
 
@@ -232,7 +231,8 @@
     appStatusItem = [bar statusItemWithLength:NSVariableStatusItemLength];
     [appStatusItem retain];
     
-    [appStatusItem setTitle:@"GH"];
+//    [appStatusItem setTitle:@"GH"];
+	[appStatusItem setImage:[NSImage imageNamed:@"githubnotifier_inactive.png"]];
     [appStatusItem setHighlightMode:YES];
     [appStatusItem setTarget:self];
 	[appStatusItem setMenu:self.appMenu];
@@ -264,7 +264,10 @@
 
 - (IBAction)showPreferences:(id)sender
 {
-	PreferencesWindowController *preferencesWindowController = [[PreferencesWindowController alloc] initWithWindowNibName:@"Preferences"];
-	[preferencesWindowController showWindow:nil];
+	self.preferencesWindowController = [[PreferencesWindowController alloc] initWithWindowNibName:@"Preferences"];
+
+	[NSApp activateIgnoringOtherApps: YES];
+	[[self.preferencesWindowController window] makeKeyWindow];
+	
 }
 @end
