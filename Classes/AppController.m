@@ -67,6 +67,7 @@
 
 - (IBAction)showAbout:(id)sender
 {
+	[NSApp activateIgnoringOtherApps:YES];
 	[NSApp orderFrontStandardAboutPanel:self];
 }
 
