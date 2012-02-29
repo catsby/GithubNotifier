@@ -197,7 +197,7 @@
 								<int key="NSPeriodicDelay">400</int>
 								<int key="NSPeriodicInterval">75</int>
 							</object>
-							<string key="BWHBUrlString">https://github.com/account</string>
+							<string key="BWHBUrlString">https://github.com/settings/admin</string>
 						</object>
 						<object class="NSButton" id="792899793">
 							<reference key="NSNextResponder" ref="535099209"/>
