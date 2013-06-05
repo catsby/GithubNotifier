@@ -48,4 +48,4 @@ or use your own key
 [5]: http://extendmac.com/EMKeychain
 [6]: http://www.enormego.com
 [7]: http://github.com/enormego/cocoa-helpers
-[8]: https://github.com/downloads/ctshryock/GithubNotifier/GithubNotifier-1.2.zip
+[8]: https://github.com/downloads/catsby/GithubNotifier/GithubNotifier-1.2.zip
